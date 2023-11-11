@@ -1,20 +1,21 @@
 {
   "files": {
-    "main.css": "/fittingswale/static/css/main.aca5e012.css",
-    "main.js": "/fittingswale/static/js/main.34fface0.js",
+    "main.css": "/fittingswale/static/css/main.a80175d1.css",
+    "main.js": "/fittingswale/static/js/main.396bc952.js",
     "static/js/787.3646f686.chunk.js": "/fittingswale/static/js/787.3646f686.chunk.js",
     "static/media/Poppins-Italic.ttf": "/fittingswale/static/media/Poppins-Italic.e373f6163127e2d469af.ttf",
     "static/media/Poppins-Light.ttf": "/fittingswale/static/media/Poppins-Light.7641a0f76ca9ef6c252c.ttf",
     "static/media/Poppins-SemiBold.ttf": "/fittingswale/static/media/Poppins-SemiBold.ac8d04b620e54be9b0f0.ttf",
     "static/media/Poppins-Bold.ttf": "/fittingswale/static/media/Poppins-Bold.cdb29a5d7ccf57ff05a3.ttf",
     "static/media/Poppins-Black.ttf": "/fittingswale/static/media/Poppins-Black.d8b850b920a5ef49d752.ttf",
+    "static/media/CedarvilleCursive-Regular.ttf": "/fittingswale/static/media/CedarvilleCursive-Regular.a669593f51bb81ad0cc1.ttf",
     "index.html": "/fittingswale/index.html",
-    "main.aca5e012.css.map": "/fittingswale/static/css/main.aca5e012.css.map",
-    "main.34fface0.js.map": "/fittingswale/static/js/main.34fface0.js.map",
+    "main.a80175d1.css.map": "/fittingswale/static/css/main.a80175d1.css.map",
+    "main.396bc952.js.map": "/fittingswale/static/js/main.396bc952.js.map",
     "787.3646f686.chunk.js.map": "/fittingswale/static/js/787.3646f686.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.aca5e012.css",
-    "static/js/main.34fface0.js"
+    "static/css/main.a80175d1.css",
+    "static/js/main.396bc952.js"
   ]
 }
