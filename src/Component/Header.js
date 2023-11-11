@@ -7,9 +7,12 @@ import IconButton from './IconButton'
 import { FiPhoneCall } from 'react-icons/fi'
 import { LiaHandshakeSolid } from 'react-icons/lia'
 import useMediaQuery from './useMediaQuery'
+import { Link, useNavigate } from 'react-router-dom'
 export default function Header() {
-    const { handleSubmit, control, formState: { errors }, } = useForm();
+    const { control} = useForm();
     const mobile = useMediaQuery('(max-width: 768px)');
+    const navigate =  useNavigate();
+    const [search, setSearch] = React.useState("")
     return (
         <div style={{
             display: "flex",
@@ -37,16 +40,19 @@ export default function Header() {
                             marginBlockEnd: 15
                         }}>
                             <p style={{ marginBlock: 0, ...FONTS.h1 }}>Fittings<span style={{ ...FONTS.body1, color: COLORS.Primary }}>Wale</span></p>
-                            <div style={{
-                                display: "flex",
-                                justifyContent: "center",
-                                alignItems: "center",
-                                padding: 5,
-                                borderRadius: "50%",
-                                boxShadow: "0 0 10px rgba(0,0,0,0.2)",
-                            }}>
+                            <Link
+                                to={'/auth'}
+                                style={{
+                                    display: "flex",
+                                    justifyContent: "center",
+                                    alignItems: "center",
+                                    padding: 5,
+                                    borderRadius: "50%",
+                                    boxShadow: "0 0 10px rgba(0,0,0,0.2)",
+                                    textDecoration: "none",
+                                }}>
                                 <AiOutlineUser color={COLORS.black} size={30} />
-                            </div>
+                            </Link>
                         </div>
                         <div style={{
                             width: "90%",
@@ -79,7 +85,8 @@ export default function Header() {
                                                 outline: "none",
                                                 backgroundColor: "#f0f0f0",
                                                 ...FONTS.h3,
-                                                color: COLORS.black
+                                                color: COLORS.black,
+                                                padding: 0,
                                             }}
                                             type="text"
                                             placeholder="Search for Products"
@@ -102,7 +109,9 @@ export default function Header() {
                             alignItems: "center",
                             marginBlockEnd: 15
                         }}>
-                            <p style={{ marginBlock: 0, ...FONTS.h1 }}>Fittings<span style={{ ...FONTS.body1, color: COLORS.Primary }}>Wale</span></p>
+                            <Link 
+                            to={'/'}
+                            style={{ textDecoration:"none",color:COLORS.black,marginBlock: 0, ...FONTS.h1 }}>Fittings<span style={{ ...FONTS.body1, color: COLORS.Primary }}>Wale</span></Link>
                             <Controller
                                 name="search"
                                 control={control}
@@ -128,7 +137,8 @@ export default function Header() {
                                                 outline: "none",
                                                 backgroundColor: "#f0f0f0",
                                                 ...FONTS.h3,
-                                                color: COLORS.black
+                                                color: COLORS.black,
+                                                padding: 0,
                                             }}
                                             type="text"
                                             placeholder="Search for Products"
@@ -136,7 +146,9 @@ export default function Header() {
                                             value={value}
                                             onChange={onChange}
                                         />
-                                        <MdClear color={COLORS.gray} size={30} style={{ marginRight: 10 }} />
+                                        <MdClear onClick={()=>{
+                                            setSearch("")
+                                        }} color={COLORS.gray} size={30} style={{ marginRight: 10 }} />
                                     </div>
                                 )}
                             />
@@ -185,6 +197,7 @@ export default function Header() {
                                     color: COLORS.black,
                                     ...FONTS.h4
                                 }}
+                                onClick={() => navigate('/auth')}
                             />
                             <IconButton
                                 Icon={AiOutlineMobile}
@@ -192,7 +205,11 @@ export default function Header() {
                                 color={COLORS.black}
                                 textStyle={{
                                     color: COLORS.black,
-                                    ...FONTS.h4
+                                    fontFamily: "Poppins-Bold",
+                                    fontSize: 13.5
+                                }}
+                                onClick={() => {
+                                    console.log(search)
                                 }}
                                 buttonStyle={{
                                     marginInline: 10

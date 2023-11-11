@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { HashRouter } from 'react-router-dom';
 import Header from './Component/Header';
+import Footer from './Component/Footer';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -12,6 +13,7 @@ root.render(
     <HashRouter>
       <Header />
       <App />
+      <Footer/>
     </HashRouter>
   </React.StrictMode>
 );
