@@ -13,7 +13,7 @@ root.render(
     <HashRouter>
       <Header />
       <App />
-      <Footer/>
+      {/* <Footer/> */}
     </HashRouter>
   </React.StrictMode>
 );

@@ -19,9 +19,9 @@ export default function Footer() {
                 width: '80%',
                 justifyContent: 'space-between',
                 alignItems: 'center',
+                textAlign:"center"
             }}>
-                <p style={{ color: COLORS.white, marginBlockEnd: 0, ...FONTS.h1 }}>Fittings<span style={{ ...FONTS.body1, color: COLORS.Primary }}>Wale</span></p>
-
+                <p style={{ color: COLORS.white, marginBlock: 0, ...FONTS.h1 }}>Fittings<span style={{ ...FONTS.body1, color: COLORS.Primary }}>Wale</span></p>
                 <p style={{
                     color: COLORS.white,
                     margin: 0,
