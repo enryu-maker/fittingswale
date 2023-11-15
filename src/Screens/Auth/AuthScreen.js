@@ -16,13 +16,15 @@ export default function AuthScreen() {
         <div
             style={{
                 display: "flex",
+                flexDirection: "column",
                 justifyContent: "center",
-                // alignItems: "center",
+                alignItems: "center",
                 width: "100vw",
                 height:mobile? "100vh":"88vh",
                 backgroundColor: "#f5f5f5"
             }}
         >
+            
             <div style={{
                 height: mobile ? "85%" : "80%",
                 width: mobile ? "95%" : "55%",
@@ -200,7 +202,8 @@ export default function AuthScreen() {
                                         color: COLORS.Primary,
                                         border: "none",
                                         outline: "none",
-                                        backgroundColor: COLORS.transparent
+                                        backgroundColor: COLORS.transparent,
+                                        cursor: "pointer"
                                     }}
                                         onClick={() => {
                                             setCount(1)
@@ -470,7 +473,8 @@ export default function AuthScreen() {
                                         color: COLORS.Primary,
                                         border: "none",
                                         outline: "none",
-                                        backgroundColor: COLORS.transparent
+                                        backgroundColor: COLORS.transparent,
+                                        cursor: "pointer"
                                     }}
                                         onClick={() => {
                                             setCount(0)

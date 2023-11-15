@@ -8,6 +8,8 @@ import { Images } from '../../Assets/Image';
 import CircularCard from '../../Component/CircularCard';
 import TextButton from '../../Component/TextButton';
 import { useNavigate } from 'react-router-dom';
+import FlatList from 'flatlist-react/lib';
+import { Data } from '../../Constants/Data';
 export default function Home() {
   const mobile = useMediaQuery('(max-width: 768px)');
   const navigate = useNavigate();
@@ -37,7 +39,7 @@ export default function Home() {
           autoPlay={true}
           interval={3000}
           stopOnHover={false}
-          showIndicators={true}
+          showIndicators={false}
         >
           <div style={{
             width: "100%",
@@ -78,23 +80,27 @@ export default function Home() {
             color: COLORS.Primary
           }}>.</span></p>
             <div style={{
-              display: "flex",
-              flexDirection: "row",
-              justifyContent: "space-evenly",
-              alignItems: "center",
-              width: "95%",
-              alignSelf: "center",
+             display: 'flex',
+             flexDirection: mobile ? "column" : "row",
+             justifyContent: "flex-start",
+             alignItems: "center",
+             width: mobile ? "100%" : "92%",
+             marginBlockEnd:mobile?null : "50px",
+             overflowY:mobile?"hidden" : "auto",
+            //  whiteSpace:mobile?"normal" : "nowrap",
             }}>
-              <CircularCard />
-              <CircularCard />
-              <CircularCard />
-              <CircularCard />
-              <CircularCard />
-              <CircularCard />
-              <CircularCard />
-              <CircularCard />
-              <CircularCard />
-              <CircularCard />
+              <FlatList
+                list={Data.Category}
+                renderItem={(item, index) => {
+                  return (
+                    <CircularCard
+                      item={item}
+                    />
+                  )
+                }}
+                renderWhenEmpty={() => <div>List is empty!</div>}
+                display={{ grid: true, columns: 5, gap: 10 }}
+              />
             </div>
             </>
         }
@@ -105,7 +111,7 @@ export default function Home() {
           flexDirection: 'column',
           alignItems: 'center',
           width: "100%",
-          backgroundColor: "white",
+          backgroundColor:COLORS.white,
         }}
       >
         <p style={{
@@ -115,16 +121,31 @@ export default function Home() {
         }}>Latest Arrivals <span style={{
           color: COLORS.Primary
         }}>.</span></p>
-        <div style={{
-          display: 'flex',
-          flexDirection: mobile ? "column" : "row",
-          justifyContent: "flex-start",
-          alignItems: "center",
-          width: mobile ? "90%" : "92%",
-          marginBlockEnd: "50px",
-          overflowY: "auto",
-          whiteSpace: "nowrap",
+        <div style={
+          mobile?
+          {
+            display: 'flex',
+            // flexDirection: mobile ? "column" : "row",
+            justifyContent: "center",
+            // alignItems: "center",
+            // width: mobile ? "100%" : "92%",
+            // marginBlockEnd:mobile?null : "50px",
+            // overflowY:mobile?"hidden" : "auto",
+            whiteSpace:mobile?"normal" : "nowrap",
+            flexWrap:mobile?"wrap":"nowrap",
+          }:
+          {
+            display: 'flex',
+            flexDirection: mobile ? "column" : "row",
+            justifyContent: "flex-start",
+            alignItems: "center",
+            width: mobile ? "100%" : "92%",
+            marginBlockEnd:mobile?null : "50px",
+            overflowY:mobile?"hidden" : "auto",
+            whiteSpace:mobile?"normal" : "nowrap",
         }}>
+          <ProductCard />
+          <ProductCard />
           <ProductCard />
           <ProductCard />
           <ProductCard />
@@ -170,15 +191,24 @@ export default function Home() {
         }}>In the SpotLight <span style={{
           color: COLORS.Primary
         }}>.</span></p>
-        <div style={{
-          display: 'flex',
-          flexDirection: mobile ? "column" : "row",
-          justifyContent: "flex-start",
-          alignItems: "center",
-          width: mobile ? "90%" : "92%",
-          marginBlockEnd: "50px",
-          overflowY: "auto",
-          whiteSpace: "nowrap",
+        <div style={
+          mobile?
+          {
+            display: 'flex',
+            justifyContent: "center",
+            whiteSpace:mobile?"normal" : "nowrap",
+            flexWrap:mobile?"wrap":"nowrap",
+          }:
+          {
+            display: 'flex',
+            flexDirection: mobile ? "column" : "row",
+            justifyContent: "flex-start",
+            alignItems: "center",
+            width: mobile ? "100%" : "92%",
+            marginBlockEnd:mobile?null : "50px",
+            overflowY:mobile?"hidden" : "auto",
+            textEmphasis:"ellipsis",
+            whiteSpace:mobile?"normal" : "nowrap",
         }}>
           <ProductCard />
           <ProductCard />

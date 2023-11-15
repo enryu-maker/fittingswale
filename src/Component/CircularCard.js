@@ -1,17 +1,28 @@
 import React from 'react'
 import { Images } from '../Assets/Image'
 import { FONTS } from '../Assets/Theme'
-export default function CircularCard() {
+import { useNavigate } from 'react-router-dom'
+export default function CircularCard({
+    item
+}) {
+    const navigate = useNavigate();
     return (
         <>
-            <div
+            <button
                 style={{
                     display: "flex",
                     flexDirection: "column",
-                    justifyContent: "space-evenly",
+                    justifyContent: "flex-start",
                     alignItems: "center",
-                    width: "150px",
+                    width: "120px",
                     height: "150px",
+                    border: "none",
+                    backgroundColor: "transparent",
+                }}
+                onClick={() => {
+                    navigate("CatInfo", {
+                        item: item
+                    })
                 }}
             >
                 <img 
@@ -21,12 +32,14 @@ export default function CircularCard() {
                     width: "70px",
                     borderRadius: "50%",
                     border: "2px solid lightgray",
+                    cursor: "pointer",
                 }}/>
                 <p style={{
                     ...FONTS.h5,
                     marginBlock:0,
-                }}>Skrew</p>
-            </div>
+                    width: "120px",
+                }}>{item?.name}</p>
+            </button>
 
         </>
     )

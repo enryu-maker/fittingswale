@@ -8,10 +8,14 @@ import { FiPhoneCall } from 'react-icons/fi'
 import { LiaHandshakeSolid } from 'react-icons/lia'
 import useMediaQuery from './useMediaQuery'
 import { Link, useNavigate } from 'react-router-dom'
+import CButton from './CButton'
+import FlatList from 'flatlist-react/lib'
+import { Data } from '../Constants/Data'
+import Tab from './Tab'
 export default function Header() {
-    const { control} = useForm();
+    const { control } = useForm();
     const mobile = useMediaQuery('(max-width: 768px)');
-    const navigate =  useNavigate();
+    const navigate = useNavigate();
     const [search, setSearch] = React.useState("")
     return (
         <div style={{
@@ -26,7 +30,7 @@ export default function Header() {
             top: 0,
             backgroundColor: COLORS.white,
             zIndex: 100,
-            paddingBlock: 15
+            paddingBlockStart: 10
         }}>
             {
                 mobile ?
@@ -37,7 +41,6 @@ export default function Header() {
                             display: "flex",
                             justifyContent: "space-between",
                             alignItems: "center",
-                            marginBlockEnd: 15
                         }}>
                             <p style={{ marginBlock: 0, ...FONTS.h1 }}>Fittings<span style={{ ...FONTS.body1, color: COLORS.Primary }}>Wale</span></p>
                             <Link
@@ -59,6 +62,7 @@ export default function Header() {
                             display: "flex",
                             justifyContent: "space-between",
                             alignItems: "center",
+                            marginBlock: 10
                         }}>
                             <Controller
                                 name="search"
@@ -103,15 +107,15 @@ export default function Header() {
                     :
                     <>
                         <div style={{
-                            width: "90%",
+                            width: "95%",
                             display: "flex",
                             justifyContent: "space-between",
                             alignItems: "center",
-                            marginBlockEnd: 15
+                            marginBlock: 15
                         }}>
-                            <Link 
-                            to={'/'}
-                            style={{ textDecoration:"none",color:COLORS.black,marginBlock: 0, ...FONTS.h1 }}>Fittings<span style={{ ...FONTS.body1, color: COLORS.Primary }}>Wale</span></Link>
+                            <Link
+                                to={'/'}
+                                style={{ textDecoration: "none", color: COLORS.black, marginBlock: 0, ...FONTS.h1 }}>Fittings<span style={{ ...FONTS.body1, color: COLORS.Primary }}>Wale</span></Link>
                             <Controller
                                 name="search"
                                 control={control}
@@ -146,7 +150,7 @@ export default function Header() {
                                             value={value}
                                             onChange={onChange}
                                         />
-                                        <MdClear onClick={()=>{
+                                        <MdClear onClick={() => {
                                             setSearch("")
                                         }} color={COLORS.gray} size={30} style={{ marginRight: 10 }} />
                                     </div>
@@ -174,24 +178,8 @@ export default function Header() {
                                 <AiOutlineShoppingCart color={COLORS.Primary} size={30} />
                             </div>
                             <IconButton
-                                Icon={LiaHandshakeSolid}
-                                title="Be our Partner"
-                                color={COLORS.black}
-                                textStyle={{
-                                    color: COLORS.black,
-                                    ...FONTS.h4
-                                }}
-                            />
-                        </div>
-                        <div style={{
-                            width: "90%",
-                            display: "flex",
-                            justifyContent: "flex-end",
-                            alignItems: "center",
-                        }}>
-                            <IconButton
                                 Icon={AiOutlineUser}
-                                title="Login/Register"
+                                title="Login"
                                 color={COLORS.black}
                                 textStyle={{
                                     color: COLORS.black,
@@ -201,31 +189,59 @@ export default function Header() {
                             />
                             <IconButton
                                 Icon={AiOutlineMobile}
-                                title="Download App"
+                                // title="Download App"
                                 color={COLORS.black}
+                                buttonStyle={{
+                                    width: "auto",
+                                    paddingInline: 10,
+                                }}
                                 textStyle={{
                                     color: COLORS.black,
                                     fontFamily: "Poppins-Bold",
                                     fontSize: 13.5
                                 }}
-                                onClick={() => {
-                                    console.log(search)
-                                }}
-                                buttonStyle={{
-                                    marginInline: 10
-                                }}
-                            />
-                            <IconButton
-                                Icon={FiPhoneCall}
-                                title="Contact Us"
-                                color={COLORS.black}
-                                textStyle={{
-                                    color: COLORS.black,
-                                    ...FONTS.h4
-                                }}
+                                onClick={() => navigate('/download')}
                             />
                         </div>
+                        {
+                            mobile ? null
+                                :
+                                    <div style={{
+                                        width: "100%",
+                                        display: "flex",
+                                        justifyContent: "space-between",
+                                        alignItems: "center",
+                                        backgroundColor: "#f5f5f5",
+                                    }}>
+                                        <FlatList
+                                            list={Data.Category}
+                                            renderItem={(item, index) => (
+                                                <>
+                                                <div style={{
+                                                    width: "1px",
+                                                    height: "50px",
+                                                    backgroundColor: "lightgray",
+                                                }}/>
+                                                <CButton
+                                                    index={index}
+                                                    title={item.name}
+                                                    onClick={() => navigate(item.path)}
+                                                />
+                                                <div style={{
+                                                    width: "1px",
+                                                    height: "50px",
+                                                    backgroundColor: "lightgray",
+                                                }}/>
+                                                </>
+                                            )}
+                                            renderWhenEmpty={() => <p>no data found</p>}
+                                        />
+                                    </div>
+                        }
                     </>
+            }
+            {
+                mobile?<Tab/> : null 
             }
         </div>
     )

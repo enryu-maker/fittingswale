@@ -1,6 +1,6 @@
 export const COLORS={
     // Primary:"rgb(126,204,122)",
-    Primary1:"#df643a65",
+    Primary1:"#df643a35",
     Primary:`#df643a`,
     // Primary:"#757D85",
     transparentPrimary: "#d6f5d6",
@@ -47,6 +47,7 @@ export const SIZES = {
 //   emphasis: (Platform.OS === "ios" ? "HelveticaNeue-Italic" : "monospace") }
 export const FONTS = {
     largeTitle: { fontFamily: "Poppins-Black", fontSize: SIZES.largeTitle },
+    largeTitleBody: { fontFamily: "Poppins-Regular", fontSize: SIZES.largeTitle },
     h1: { fontFamily: "Poppins-Bold", fontSize: SIZES.h1,  fontWeight:'bold'},
     h2: { fontFamily: "Poppins-Bold", fontSize: SIZES.h2, fontWeight:'bold'},
     h3: { fontFamily: "Poppins-Bold", fontSize: SIZES.h3, fontWeight:'bold'},
