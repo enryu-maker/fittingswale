@@ -82,7 +82,7 @@ export default function Home() {
             <div style={{
              display: 'flex',
              flexDirection: mobile ? "column" : "row",
-             justifyContent: "flex-start",
+             justifyContent: "center",
              alignItems: "center",
              width: mobile ? "100%" : "92%",
              marginBlockEnd:mobile?null : "50px",

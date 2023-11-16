@@ -42,7 +42,9 @@ export default function Header() {
                             justifyContent: "space-between",
                             alignItems: "center",
                         }}>
-                            <p style={{ marginBlock: 0, ...FONTS.h1 }}>Fittings<span style={{ ...FONTS.body1, color: COLORS.Primary }}>Wale</span></p>
+                            <Link
+                                to={'/'}
+                                style={{ textDecoration: "none", color: COLORS.black, marginBlock: 0, ...FONTS.h1 }}>Fittings<span style={{ ...FONTS.body1, color: COLORS.Primary }}>Wale.</span></Link>
                             <Link
                                 to={'/auth'}
                                 style={{
@@ -115,7 +117,7 @@ export default function Header() {
                         }}>
                             <Link
                                 to={'/'}
-                                style={{ textDecoration: "none", color: COLORS.black, marginBlock: 0, ...FONTS.h1 }}>Fittings<span style={{ ...FONTS.body1, color: COLORS.Primary }}>Wale</span></Link>
+                                style={{ textDecoration: "none", color: COLORS.black, marginBlock: 0, ...FONTS.h1 }}>Fittings<span style={{ ...FONTS.body1, color: COLORS.Primary }}>Wale.</span></Link>
                             <Controller
                                 name="search"
                                 control={control}
@@ -206,42 +208,34 @@ export default function Header() {
                         {
                             mobile ? null
                                 :
-                                    <div style={{
-                                        width: "100%",
-                                        display: "flex",
-                                        justifyContent: "space-between",
-                                        alignItems: "center",
-                                        backgroundColor: "#f5f5f5",
-                                    }}>
-                                        <FlatList
-                                            list={Data.Category}
-                                            renderItem={(item, index) => (
-                                                <>
-                                                <div style={{
-                                                    width: "1px",
-                                                    height: "50px",
-                                                    backgroundColor: "lightgray",
-                                                }}/>
+                                <div style={{
+                                    width: "100%",
+                                    display: "flex",
+                                    justifyContent: "space-between",
+                                    alignItems: "center",
+                                    backgroundColor: "#f5f5f5",
+                                    transition: "all 0.5s ease",
+                                }}>
+                                    <FlatList
+                                        list={Data.Category}
+                                        renderItem={(item, index) => (
+                                            <>
                                                 <CButton
+                                                    data={item}
                                                     index={index}
                                                     title={item.name}
                                                     onClick={() => navigate(item.path)}
                                                 />
-                                                <div style={{
-                                                    width: "1px",
-                                                    height: "50px",
-                                                    backgroundColor: "lightgray",
-                                                }}/>
-                                                </>
-                                            )}
-                                            renderWhenEmpty={() => <p>no data found</p>}
-                                        />
-                                    </div>
+                                            </>
+                                        )}
+                                        renderWhenEmpty={() => <p>no data found</p>}
+                                    />
+                                </div>
                         }
                     </>
             }
             {
-                mobile?<Tab/> : null 
+                mobile ? <Tab /> : null
             }
         </div>
     )
