@@ -3,10 +3,14 @@ import { Images } from '../Assets/Image'
 import { FONTS } from '../Assets/Theme'
 import { FaStar } from "react-icons/fa";
 import useMediaQuery from './useMediaQuery';
+import { useNavigate } from 'react-router-dom';
 export default function ProductCard({
-    desc= "McCoy Soudal Windowseal Siliconized Acrylic Sealant - White (270 ml)",
+    item,
+    cat,
+    desc = "McCoy Soudal Windowseal Siliconized Acrylic Sealant - White (270 ml)",
 }) {
     const mobile = useMediaQuery('(max-width: 768px)');
+    const Navigate = useNavigate();
     return (
         <div
             style={{
@@ -21,6 +25,16 @@ export default function ProductCard({
                 flexDirection: "column",
                 margin: "10px",
                 paddingBlock: "5px",
+                cursor: "pointer",
+            }}
+            onClick={() => {
+                Navigate(`prodinfo/${item.id}`, {
+                    state: {
+                        id: item.id,
+                        item: item,
+                        cat: cat,
+                    }
+                })
             }}
         >
             <img
@@ -28,7 +42,7 @@ export default function ProductCard({
                 style={{
                     height: mobile ? "80px" : "200px",
                     width: "94%",
-                    borderRadius:mobile?"10px" : "15px",
+                    borderRadius: mobile ? "10px" : "15px",
                     // marginTop: mobile?"4px" : "8px",
                 }}
             />
@@ -40,6 +54,8 @@ export default function ProductCard({
                     width: "90%",
                     overflow: "hidden",
                     textOverflow: "ellipsis",
+                    textTransform: "capitalize",
+
                 }
                     : {
                         ...FONTS.body3,
@@ -48,20 +64,21 @@ export default function ProductCard({
                         width: "90%",
                         overflow: "hidden",
                         textOverflow: "ellipsis",
-                    }}>{desc}</p>
+                        textTransform: "capitalize",
+                    }}>{item?.name}</p>
             <div style={{
                 display: "flex",
                 width: "90%",
                 justifyContent: "flex-start",
                 alignItems: "center",
             }}>
-                <FaStar  color='#ffd700' />
-                <p style={mobile?{
+                <FaStar color='#ffd700' />
+                <p style={mobile ? {
                     ...FONTS.h5,
                     marginBlock: "0px",
                     alignSelf: "center",
                     marginLeft: "5px",
-                }:{
+                } : {
                     ...FONTS.h3,
                     marginBlock: "0px",
                     alignSelf: "center",
@@ -75,31 +92,31 @@ export default function ProductCard({
                 alignItems: "center",
             }}>
                 <p style={
-                    mobile?{
-                    ...FONTS.h4,
-                    marginBlock: "0px",
-                    alignSelf: "center",
-                    }:
-                    {
-                    ...FONTS.h2,
-                    marginBlock: "0px",
-                    alignSelf: "center",
-                }}>₹3,072</p>
+                    mobile ? {
+                        ...FONTS.h4,
+                        marginBlock: "0px",
+                        alignSelf: "center",
+                    } :
+                        {
+                            ...FONTS.h2,
+                            marginBlock: "0px",
+                            alignSelf: "center",
+                        }}>₹3,072</p>
                 <p style={
-                    mobile?{
+                    mobile ? {
                         ...FONTS.h5,
                         marginBlock: "0px",
                         alignSelf: "center",
                         marginLeft: "8px",
                         color: "gray",
-                    }:
-                    {
-                    ...FONTS.h4,
-                    marginBlock: "0px",
-                    alignSelf: "center",
-                    marginLeft: "8px",
-                    color: "gray",
-                }}>incl. Tax</p>
+                    } :
+                        {
+                            ...FONTS.h4,
+                            marginBlock: "0px",
+                            alignSelf: "center",
+                            marginLeft: "8px",
+                            color: "gray",
+                        }}>incl. Tax</p>
             </div>
             <div style={{
                 display: "flex",
@@ -108,20 +125,20 @@ export default function ProductCard({
                 alignItems: "center",
             }}>
                 <p style={
-                    mobile?{
+                    mobile ? {
                         ...FONTS.h5,
                         marginBlock: "0px",
                         alignSelf: "center",
                         color: "gray",
                         textDecorationLine: "line-through",
-                    }:
-                    {
-                    ...FONTS.h3,
-                    marginBlock: "0px",
-                    alignSelf: "center",
-                    color: "gray",
-                    textDecorationLine: "line-through",
-                }}>₹6,504</p>
+                    } :
+                        {
+                            ...FONTS.h3,
+                            marginBlock: "0px",
+                            alignSelf: "center",
+                            color: "gray",
+                            textDecorationLine: "line-through",
+                        }}>₹6,504</p>
                 <p style={{
                     ...FONTS.h4,
                     marginBlock: "0px",

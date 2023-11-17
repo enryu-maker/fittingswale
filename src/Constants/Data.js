@@ -374,7 +374,19 @@ export const Data = {
             "subcategories": [
                 {
                     "id": 41,
-                    "name": "Adhesive & Masking Tape"
+                    "name": "Adhesive & Masking Tape",
+                    "Scategory": [
+                        {
+                            "id": 61,
+                            "name": "adhesive",
+                            "items": []
+                        },
+                        {
+                            "id": 62,
+                            "name": "masking tape",
+                            "items": []
+                        }
+                    ]
                 },
             ]
         },
@@ -384,7 +396,64 @@ export const Data = {
             "subcategories": [
                 {
                     "id": 51,
-                    "name": "Kitchen Fittings"
+                    "name": "Kitchen Fittings",
+                    "Scategory": [
+                        {
+                            "id": 63,
+                            "name": "cabinet lifter/gas pump",
+                            "items": []
+                        },
+                        {
+                            "id": 64,
+                            "name": "kitchen basket",
+                            "items": []
+                        },
+                        {
+                            "id": 65,
+                            "name": "tandem basket",
+                            "items": []
+                        },
+                        {
+                            "id": 66,
+                            "name": "wicker basket",
+                            "items": []
+                        },
+                        {
+                            "id": 67,
+                            "name": "kitchen accessories",
+                            "items": []
+                        },
+                        {
+                            "id": 68,
+                            "name": "ss telescopic channel",
+                            "items": []
+                        },
+                        {
+                            "id": 69,
+                            "name": "magic corner",
+                            "items": []
+                        },
+                        {
+                            "id": 70,
+                            "name": "tall unit",
+                            "items": []
+                        },
+                        {
+                            "id": 71,
+                            "name": "snake corner",
+                            "items": []
+                        },
+                        {
+                            "id": 72,
+                            "name": "pullout",
+                            "items": []
+                        },
+                        {
+                            "id": 73,
+                            "name": "basket fitting",
+                            "items": []
+                        }
+                    ]
                 },
             ]
         },
@@ -394,7 +463,34 @@ export const Data = {
             "subcategories": [
                 {
                     "id": 61,
-                    "name": "Glass Fittings"
+                    "name": "Glass Fittings",
+                    "Scategory": [
+                        {
+                            "id": 74,
+                            "name": "glass door handle",
+                            "items": []
+                        },
+                        {
+                            "id": 75,
+                            "name": "glass hinge",
+                            "items": []
+                        },
+                        {
+                            "id": 76,
+                            "name": "floor spring",
+                            "items": []
+                        },
+                        {
+                            "id": 77,
+                            "name": "glass lock",
+                            "items": []
+                        },
+                        {
+                            "id": 78,
+                            "name": "glass fittings",
+                            "items": []
+                        }
+                    ]
                 },
             ]
         },
@@ -404,17 +500,132 @@ export const Data = {
             "subcategories": [
                 {
                     "id": 71,
-                    "name": "Shelf Support"
+                    "name": "Shelf Support",
+                    "Scategory": [
+                        {
+                            "id": 91,
+                            "name": "f bracket",
+                            "items": []
+                        },
+                        {
+                            "id": 92,
+                            "name": "d bracket",
+                            "items": []
+                        },
+                        {
+                            "id": 93,
+                            "name": "mobile display hook",
+                            "items": []
+                        },
+                        {
+                            "id": 94,
+                            "name": "shelf rack",
+                            "items": []
+                        },
+                        {
+                            "id": 95,
+                            "name": "channel stand",
+                            "items": []
+                        },
+                        {
+                            "id": 96,
+                            "name": "L support",
+                            "items": []
+                        },
+                        {
+                            "id": 97,
+                            "name": "S bracket",
+                            "items": []
+                        },
+                        {
+                            "id": 98,
+                            "name": "table bracket",
+                            "items": []
+                        },
+                        {
+                            "id": 99,
+                            "name": "dining table bracket",
+                            "items": []
+                        },
+                        {
+                            "id": 100,
+                            "name": "L button",
+                            "items": []
+                        }
+                    ]
+
                 },
             ]
         },
         {
             "id": 8,
-            "name": "Accessories",
+            "name": "Hardware Accessories",
             "subcategories": [
                 {
                     "id": 81,
-                    "name": "Accessories"
+                    "name": "Accessories",
+                    "Scategory": [
+                        {
+                            "id": 79,
+                            "name": "castor wheel",
+                            "items": []
+                        },
+                        {
+                            "id": 80,
+                            "name": "bed hydraulic",
+                            "items": []
+                        },
+                        {
+                            "id": 81,
+                            "name": "furniture leg",
+                            "items": []
+                        },
+                        {
+                            "id": 82,
+                            "name": "furniture misc.",
+                            "items": []
+                        },
+                        {
+                            "id": 83,
+                            "name": "j hook",
+                            "items": []
+                        },
+                        {
+                            "id": 84,
+                            "name": "mirror holder",
+                            "items": []
+                        },
+                        {
+                            "id": 85,
+                            "name": "mirror stud",
+                            "items": []
+                        },
+                        {
+                            "id": 86,
+                            "name": "khutti",
+                            "items": []
+                        },
+                        {
+                            "id": 87,
+                            "name": "wall plug",
+                            "items": []
+                        },
+                        {
+                            "id": 88,
+                            "name": "wire manager",
+                            "items": []
+                        },
+                        {
+                            "id": 89,
+                            "name": "digital device",
+                            "items": []
+                        },
+                        {
+                            "id": 90,
+                            "name": "bed joint",
+                            "items": []
+                        }
+                    ]
                 },
             ]
         },
@@ -423,12 +634,30 @@ export const Data = {
             "name": "Magnet Mesh Curtain",
             "subcategories": [
                 {
-                    "id": 91,
-                    "name": "Magnet Mesh Curtain"
-                },
-                {
                     "id": 92,
-                    "name": "Mosquito Mesh"
+                    "name": "Mosquito Mesh",
+                    "Scategory": [
+                        {
+                            "id": 101,
+                            "name": "ss wire mesh",
+                            "items": []
+                        },
+                        {
+                            "id": 102,
+                            "name": "alloy wire mesh",
+                            "items": []
+                        },
+                        {
+                            "id": 103,
+                            "name": "pvc wire mesh",
+                            "items": []
+                        },
+                        {
+                            "id": 104,
+                            "name": "welcrow",
+                            "items": []
+                        }
+                    ]
                 }
             ]
         },
@@ -438,7 +667,49 @@ export const Data = {
             "subcategories": [
                 {
                     "id": 101,
-                    "name": "Bath Fittings"
+                    "name": "Bath Fittings",
+                    "Scategory": [
+                        {
+                            "id": 105,
+                            "name": "towel rod",
+                            "items": []
+                        },
+                        {
+                            "id": 106,
+                            "name": "towel ring",
+                            "items": []
+                        },
+                        {
+                            "id": 107,
+                            "name": "soap dish",
+                            "items": []
+                        },
+                        {
+                            "id": 108,
+                            "name": "corner",
+                            "items": []
+                        },
+                        {
+                            "id": 109,
+                            "name": "towel rack",
+                            "items": []
+                        },
+                        {
+                            "id": 110,
+                            "name": "grab bar",
+                            "items": []
+                        },
+                        {
+                            "id": 111,
+                            "name": "liquid soap dispenser",
+                            "items": []
+                        },
+                        {
+                            "id": 112,
+                            "name": "toothbrush holder",
+                            "items": []
+                        }
+                    ]
                 },
             ]
         }

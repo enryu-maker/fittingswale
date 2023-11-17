@@ -1,14 +1,14 @@
-export const COLORS={
+export const COLORS = {
     // Primary:"rgb(126,204,122)",
-    Primary1:"#df643a35",
-    Primary:`#df643a`,
+    Primary1: "#df643a35",
+    Primary: `#df643a`,
     // Primary:"#757D85",
     transparentPrimary: "#d6f5d6",
     transparentPrimary2: "#eaf7e9",
-    white:"#ffffff",
+    white: "#ffffff",
     lightGray1: "#e6e6e6",
     lightGray2: "#e6e6e6",
-    black:"#333333",
+    black: "#333333",
     gray: "#898B9A",
     gray2: "#BBBDC1",
     gray3: "#CFD0D7",
@@ -17,8 +17,8 @@ export const COLORS={
     transparent: "transparent",
     red: "red",
     green: "#27AE60",
-    layout:"#f0f0f0",
-    yellow:'#ffdf00'
+    layout: "#f0f0f0",
+    yellow: '#ffdf00'
 }
 
 export const SIZES = {
@@ -48,14 +48,14 @@ export const SIZES = {
 export const FONTS = {
     largeTitle: { fontFamily: "Poppins-Black", fontSize: SIZES.largeTitle },
     largeTitleBody: { fontFamily: "Poppins-Regular", fontSize: SIZES.largeTitle },
-    h1: { fontFamily: "Poppins-Bold", fontSize: SIZES.h1,  fontWeight:'bold'},
-    h2: { fontFamily: "Poppins-Bold", fontSize: SIZES.h2, fontWeight:'bold'},
-    h3: { fontFamily: "Poppins-Bold", fontSize: SIZES.h3, fontWeight:'bold'},
-    h4: { fontFamily: "Poppins-Bold", fontSize: SIZES.h4, fontWeight:'bold'},
-    h5: { fontFamily: "Poppins-Bold", fontSize: SIZES.h5, fontWeight:'bold'},
-    body1: { fontFamily:"Poppins-Regular", fontSize: SIZES.body1},
-    body2: { fontFamily:"Poppins-Regular", fontSize: SIZES.body2},
-    body3: { fontFamily:"Poppins-Regular", fontSize: SIZES.body3},
-    body4: { fontFamily:"Poppins-Regular", fontSize: SIZES.body4},
-    body5: { fontFamily:"Poppins-Regular", fontSize: SIZES.body5},
+    h1: { fontFamily: "Poppins-Bold", fontSize: SIZES.h1, },
+    h2: { fontFamily: "Poppins-Bold", fontSize: SIZES.h2, },
+    h3: { fontFamily: "Poppins-Bold", fontSize: SIZES.h3, },
+    h4: { fontFamily: "Poppins-Bold", fontSize: SIZES.h4, },
+    h5: { fontFamily: "Poppins-Bold", fontSize: SIZES.h5, },
+    body1: { fontFamily: "Poppins-Regular", fontSize: SIZES.body1 },
+    body2: { fontFamily: "Poppins-Regular", fontSize: SIZES.body2 },
+    body3: { fontFamily: "Poppins-Regular", fontSize: SIZES.body3 },
+    body4: { fontFamily: "Poppins-Regular", fontSize: SIZES.body4 },
+    body5: { fontFamily: "Poppins-Regular", fontSize: SIZES.body5 },
 };

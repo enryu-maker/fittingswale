@@ -20,23 +20,26 @@ export default function CircularCard({
                     backgroundColor: "transparent",
                 }}
                 onClick={() => {
-                    navigate("CatInfo", {
-                        item: item
+                    navigate("catinfo",{
+                        state:{
+                            id:item.id,
+                            item:item,
+                        }
                     })
                 }}
             >
-                <img 
-                src={Images.pic1}
-                style={{
-                    height: "70px",
-                    width: "70px",
-                    borderRadius: "50%",
-                    border: "2px solid lightgray",
-                    cursor: "pointer",
-                }}/>
+                <img
+                    src={Images.pic1}
+                    style={{
+                        height: "70px",
+                        width: "70px",
+                        borderRadius: "50%",
+                        border: "2px solid lightgray",
+                        cursor: "pointer",
+                    }} />
                 <p style={{
                     ...FONTS.h5,
-                    marginBlock:0,
+                    marginBlock: 0,
                     width: "120px",
                 }}>{item?.name}</p>
             </button>
