@@ -18,6 +18,7 @@ export default function App() {
       <Route path="/catinfo" element={<CatInfo />} />
       <Route path="/privacy" element={<Privacy />} />
       <Route path="/catinfo/prodinfo/:pid" element={<ProdInfo />} />
+      <Route path="/prodinfo/:pid" element={<ProdInfo />} />
     </Routes>
   )
 }

@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 import useMediaQuery from './useMediaQuery'
 
 export default function Footer() {
+    const mobile = useMediaQuery('(max-width: 768px)')
     return (
         <div
             style={{
@@ -13,14 +14,16 @@ export default function Footer() {
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'center',
-                alignItems: 'center'
+                alignItems: 'center',
+                paddingBlockEnd:mobile?50 : 20,
             }}
         >
             <div style={{
                 display: 'flex',
-                width: '80%',
-                justifyContent: 'space-between',
-                alignItems: 'center',
+                flexDirection: mobile ? 'column' : 'row',
+                width:mobile?"90%" : '80%',
+                justifyContent:mobile?"flex-start" :  'space-between',
+                alignItems:mobile?"flex-start" : 'center',
                 textAlign: "center"
             }}>
                 <p style={{ color: COLORS.white, marginBlockEnd: 0, ...FONTS.h1 }}>Fittings<span style={{ ...FONTS.body1, color: COLORS.Primary }}>Wale</span></p>
@@ -33,10 +36,10 @@ export default function Footer() {
             </div>
             <div style={{
                 display: 'flex',
-                width: '80%',
-                flexDirection: 'row',
-                justifyContent: 'space-between',
-                alignItems: 'flex-start',
+                flexWrap: 'wrap',
+                width:mobile?"90%" : '80%',
+                justifyContent:mobile?"space-between" :  'space-between',
+                alignItems:"flex-start",
                 textAlign: "center",
                 marginBlock: 20,
             }}>
