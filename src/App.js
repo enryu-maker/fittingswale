@@ -6,6 +6,7 @@ import Download from './Screens/Home/Download'
 import Contact from './Screens/Home/Contact'
 import CatInfo from './Screens/Home/CatInfo'
 import ProdInfo from './Screens/Home/ProdInfo'
+import Privacy from './Constants/Privacy'
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
       <Route path="/download" element={<Download />} />
       <Route path="/contact-us" element={<Contact />} />
       <Route path="/catinfo" element={<CatInfo />} />
+      <Route path="/privacy" element={<Privacy />} />
       <Route path="/catinfo/prodinfo/:pid" element={<ProdInfo />} />
     </Routes>
   )

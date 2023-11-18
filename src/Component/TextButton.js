@@ -28,7 +28,7 @@ export default function TextButton({
         <p style={{ 
             width:"100%",
             color:COLORS.white,
-            ...FONTS.h2,
+            ...FONTS.h3,
             margin:0,
             padding:0,
             ...textStyle

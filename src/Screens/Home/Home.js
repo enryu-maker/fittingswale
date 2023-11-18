@@ -13,22 +13,28 @@ import { Data } from '../../Constants/Data';
 export default function Home() {
   const mobile = useMediaQuery('(max-width: 768px)');
   const navigate = useNavigate();
+  React.useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+  })
+  }, [])
   return (
     <div style={{
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
       backgroundColor: "#f5f5f5"
-      
+
     }}>
       <div style={{
         display: 'flex',
         flexDirection: 'column',
         width: "100%",
-        height:mobile?"100px" : "auto",
+        height: mobile ? "100px" : "auto",
         alignItems: "center",
         justifyContent: "center",
-        marginBlock:mobile?"10px" : "50px",
+        marginBlock: mobile ? "10px" : "50px",
         alignSelf: "center",
       }}>
         <Carousel
@@ -71,37 +77,37 @@ export default function Home() {
         </Carousel>
         {
           mobile ? null :
-          <>
-          <p style={{
-            textAlign: 'left',
-            width: mobile ? "90%" : "92%",
-            ...FONTS.h1,
-          }}>Shop By Category<span style={{
-            color: COLORS.Primary
-          }}>.</span></p>
-            <div style={{
-             display: 'flex',
-             flexDirection: mobile ? "column" : "row",
-             justifyContent: "center",
-             alignItems: "center",
-             width: mobile ? "100%" : "92%",
-             marginBlockEnd:mobile?null : "50px",
-             overflowY:mobile?"hidden" : "auto",
-            //  whiteSpace:mobile?"normal" : "nowrap",
-            }}>
-              <FlatList
-                list={Data.Category}
-                renderItem={(item, index) => {
-                  return (
-                    <CircularCard
-                      item={item}
-                    />
-                  )
-                }}
-                renderWhenEmpty={() => <div>List is empty!</div>}
-                display={{ grid: true, columns: 5, gap: 10 }}
-              />
-            </div>
+            <>
+              <p style={{
+                textAlign: 'left',
+                width: mobile ? "90%" : "92%",
+                ...FONTS.h1,
+              }}>Shop By Category<span style={{
+                color: COLORS.Primary
+              }}>.</span></p>
+              <div style={{
+                display: 'flex',
+                flexDirection: mobile ? "column" : "row",
+                justifyContent: "center",
+                alignItems: "center",
+                width: mobile ? "100%" : "92%",
+                marginBlockEnd: mobile ? null : "50px",
+                overflowY: mobile ? "hidden" : "auto",
+                //  whiteSpace:mobile?"normal" : "nowrap",
+              }}>
+                <FlatList
+                  list={Data.Category}
+                  renderItem={(item, index) => {
+                    return (
+                      <CircularCard
+                        item={item}
+                      />
+                    )
+                  }}
+                  renderWhenEmpty={() => <div>List is empty!</div>}
+                  display={{ grid: true, columns: 5, gap: 10 }}
+                />
+              </div>
             </>
         }
       </div>
@@ -111,7 +117,7 @@ export default function Home() {
           flexDirection: 'column',
           alignItems: 'center',
           width: "100%",
-          backgroundColor:COLORS.white,
+          backgroundColor: COLORS.white,
         }}
       >
         <p style={{
@@ -122,28 +128,28 @@ export default function Home() {
           color: COLORS.Primary
         }}>.</span></p>
         <div style={
-          mobile?
-          {
-            display: 'flex',
-            // flexDirection: mobile ? "column" : "row",
-            justifyContent: "center",
-            // alignItems: "center",
-            // width: mobile ? "100%" : "92%",
-            // marginBlockEnd:mobile?null : "50px",
-            // overflowY:mobile?"hidden" : "auto",
-            whiteSpace:mobile?"normal" : "nowrap",
-            flexWrap:mobile?"wrap":"nowrap",
-          }:
-          {
-            display: 'flex',
-            flexDirection: mobile ? "column" : "row",
-            justifyContent: "flex-start",
-            alignItems: "center",
-            width: mobile ? "100%" : "92%",
-            marginBlockEnd:mobile?null : "50px",
-            overflowY:mobile?"hidden" : "auto",
-            whiteSpace:mobile?"normal" : "nowrap",
-        }}>
+          mobile ?
+            {
+              display: 'flex',
+              // flexDirection: mobile ? "column" : "row",
+              justifyContent: "center",
+              // alignItems: "center",
+              // width: mobile ? "100%" : "92%",
+              // marginBlockEnd:mobile?null : "50px",
+              // overflowY:mobile?"hidden" : "auto",
+              whiteSpace: mobile ? "normal" : "nowrap",
+              flexWrap: mobile ? "wrap" : "nowrap",
+            } :
+            {
+              display: 'flex',
+              flexDirection: mobile ? "column" : "row",
+              justifyContent: "flex-start",
+              alignItems: "center",
+              width: mobile ? "100%" : "92%",
+              marginBlockEnd: mobile ? null : "50px",
+              overflowY: mobile ? "hidden" : "auto",
+              whiteSpace: mobile ? "normal" : "nowrap",
+            }}>
           <ProductCard />
           <ProductCard />
           <ProductCard />
@@ -160,20 +166,20 @@ export default function Home() {
         alignItems: 'center',
         marginBlock: "20px",
       }}>
-      <img 
-      src={Images.started}
-      style={{
-        height:mobile?"200px" : "500px",
-        width: "100%",
-        objectFit: "contain",
-      }}
-      />
-      <TextButton
-      title={"Get Started"}
-      onClick={()=>{
-        navigate("/auth")
-      }}
-      />
+        <img
+          src={Images.started}
+          style={{
+            height: mobile ? "200px" : "500px",
+            width: "100%",
+            objectFit: "contain",
+          }}
+        />
+        <TextButton
+          title={"Get Started"}
+          onClick={() => {
+            navigate("/auth")
+          }}
+        />
       </div>
       <div
         style={{
@@ -181,7 +187,7 @@ export default function Home() {
           flexDirection: 'column',
           alignItems: 'center',
           width: "100%",
-          backgroundColor:COLORS.white,
+          backgroundColor: COLORS.white,
         }}
       >
         <p style={{
@@ -192,24 +198,24 @@ export default function Home() {
           color: COLORS.Primary
         }}>.</span></p>
         <div style={
-          mobile?
-          {
-            display: 'flex',
-            justifyContent: "center",
-            whiteSpace:mobile?"normal" : "nowrap",
-            flexWrap:mobile?"wrap":"nowrap",
-          }:
-          {
-            display: 'flex',
-            flexDirection: mobile ? "column" : "row",
-            justifyContent: "flex-start",
-            alignItems: "center",
-            width: mobile ? "100%" : "92%",
-            marginBlockEnd:mobile?null : "50px",
-            overflowY:mobile?"hidden" : "auto",
-            textEmphasis:"ellipsis",
-            whiteSpace:mobile?"normal" : "nowrap",
-        }}>
+          mobile ?
+            {
+              display: 'flex',
+              justifyContent: "center",
+              whiteSpace: mobile ? "normal" : "nowrap",
+              flexWrap: mobile ? "wrap" : "nowrap",
+            } :
+            {
+              display: 'flex',
+              flexDirection: mobile ? "column" : "row",
+              justifyContent: "flex-start",
+              alignItems: "center",
+              width: mobile ? "100%" : "92%",
+              marginBlockEnd: mobile ? null : "50px",
+              overflowY: mobile ? "hidden" : "auto",
+              textEmphasis: "ellipsis",
+              whiteSpace: mobile ? "normal" : "nowrap",
+            }}>
           <ProductCard />
           <ProductCard />
           <ProductCard />

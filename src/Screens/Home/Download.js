@@ -9,6 +9,12 @@ import { Link } from 'react-router-dom';
 export default function Download() {
     const mobile = useMediaQuery('(max-width: 768px)');
     const { control, handleSubmit, formState: { errors } } = useForm();
+    React.useEffect(() => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        })
+    }, [])
     return (
         <div
             style={{
@@ -17,7 +23,7 @@ export default function Download() {
                 alignItems: 'center',
                 // justifyContent: 'center',
                 backgroundColor: "#f5f5f5",
-                height: "80vh",
+                // height: "80vh",
                 width: "100vw",
             }}
         >
@@ -51,13 +57,13 @@ export default function Download() {
             </div>
             <div style={{
                 width: "100%",
-                height: "65%",
+                height: "60vh",
                 display: "flex",
                 flexDirection: "row",
                 alignItems: "center",
                 justifyContent: "center",
                 backgroundColor: COLORS.white,
-                transition: "all 3s ease-in-out",
+                marginBlockEnd: 40,
             }}>
                 <img
                     src={Images.Banner}

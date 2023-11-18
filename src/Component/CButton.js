@@ -27,6 +27,7 @@ export default function CButton({
                 height: "50px",
                 textAlign: "center",
                 color: COLORS.black,
+                textTransform: "capitalize",
             }}
                 onMouseEnter={(e) => {
                     e.target.style.color = COLORS.Primary;
@@ -90,6 +91,7 @@ export default function CButton({
                                 flexDirection: "column",
                                 justifyContent: data?.subcategories?.length > 5 ? "space-evenly" : "flex-start",
                                 alignItems: "flex-start",
+                                textTransform: "capitalize",
                             }}>
                                 <p style={{
                                     ...FONTS.h2,
@@ -108,6 +110,7 @@ export default function CButton({
                                             textAlign: "center",
                                             marginBlock: 5,
                                             cursor: "pointer",
+                                            textTransform: "capitalize",
                                         }}
                                             onMouseEnter={(e) => {
                                                 e.target.style.color = COLORS.Primary;
@@ -131,6 +134,7 @@ export default function CButton({
                                 alignItems: "flex-start",
                                 justifyItems: "flex-start",
                                 marginBlockStart: 10,
+                                textTransform: "capitalize",
                             }}>
                                 <p style={{
                                     ...FONTS.h2,
@@ -142,34 +146,36 @@ export default function CButton({
                                     <span style={{ color: COLORS.Primary }}>.</span>
                                 </p>
                                 <div style={{
-                                width: "92%",
-                                flexWrap: "wrap",
-                                display: "flex",
-                                // flexDirection: "column",
-                                alignItems: "flex-start",
-                                justifyContent: "space-between",
-                            }}>
-                                {
-                                    currentData?.map((item, index) => (
-                                        <li  style={{
-                                            ...FONTS.body3,
-                                            color: COLORS.black,
-                                            textAlign: "center",
-                                            marginInline: 5,
-                                            cursor: "pointer",
-                                            textAlignLast: "center",
-                                        }}
-                                            onMouseEnter={(e) => {
-                                                e.target.style.color = COLORS.Primary;
+                                    width: "92%",
+                                    flexWrap: "wrap",
+                                    display: "flex",
+                                    // flexDirection: "column",
+                                    alignItems: "flex-start",
+                                    justifyContent: "space-between",
+                                }}>
+                                    {
+                                        currentData?.map((item, index) => (
+                                            <li style={{
+                                                ...FONTS.body3,
+                                                color: COLORS.black,
+                                                textAlign: "center",
+                                                marginInline: 5,
+                                                cursor: "pointer",
+                                                textAlignLast: "center",
+                                                textTransform: "capitalize",
+
                                             }}
-                                            onMouseLeave={(e) => {
-                                                e.target.style.color = COLORS.black;
-                                            }}
-                                        >
-                                            {item.name}
-                                        </li>
-                                    ))
-                                }
+                                                onMouseEnter={(e) => {
+                                                    e.target.style.color = COLORS.Primary;
+                                                }}
+                                                onMouseLeave={(e) => {
+                                                    e.target.style.color = COLORS.black;
+                                                }}
+                                            >
+                                                {item.name}
+                                            </li>
+                                        ))
+                                    }
                                 </div>
                             </div>
                         </div>

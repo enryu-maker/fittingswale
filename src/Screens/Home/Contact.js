@@ -7,6 +7,12 @@ import { Link } from 'react-router-dom';
 export default function Contact() {
   const mobile = useMediaQuery('(max-width: 768px)');
   const { control, handleSubmit, formState: { errors } } = useForm();
+  React.useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+  })
+}, [])
   return (
     <div
       style={{
@@ -19,33 +25,33 @@ export default function Contact() {
       }}
     >
       <div style={{
-                width: "88%",
-                display: "flex",
-                flexDirection: "row",
-                alignItems: "center",
-                justifyContent: "flex-start",
-                color: COLORS.darkGray,
-                ...FONTS.body4,
-            }}>
-                <Link
-                    to="/"
-                    style={{
-                        textDecoration: "none",
-                        color: COLORS.darkGray,
-                        ...FONTS.body4,
-                    }}
-                    onMouseEnter={(e) => {
-                        e.target.style.color = COLORS.Primary;
-                    }}
-                    onMouseLeave={(e) => {
-                        e.target.style.color = COLORS.darkGray;
-                    }}
-                >
-                    Home
-                </Link>
-                <p>/</p>
-                <p>Contact Us</p>
-            </div>
+        width: "88%",
+        display: "flex",
+        flexDirection: "row",
+        alignItems: "center",
+        justifyContent: "flex-start",
+        color: COLORS.darkGray,
+        ...FONTS.body4,
+      }}>
+        <Link
+          to="/"
+          style={{
+            textDecoration: "none",
+            color: COLORS.darkGray,
+            ...FONTS.body4,
+          }}
+          onMouseEnter={(e) => {
+            e.target.style.color = COLORS.Primary;
+          }}
+          onMouseLeave={(e) => {
+            e.target.style.color = COLORS.darkGray;
+          }}
+        >
+          Home
+        </Link>
+        <p>/</p>
+        <p>Contact Us</p>
+      </div>
       <div style={{
         width: "100%",
         height: mobile ? "auto" : "75%",
@@ -54,7 +60,7 @@ export default function Contact() {
         alignItems: "center",
         justifyContent: "space-evenly",
         backgroundColor: COLORS.white,
-        transition: "all 3s ease-in-out",
+        marginBlockEnd: 40,
       }}>
         <div style={{
           display: "flex",
@@ -124,12 +130,12 @@ export default function Contact() {
           height: mobile ? "auto" : "60vh",
         }}>
           <p style={{
-              textAlign: 'left',
-              width: mobile ? "90%" : "100%",
-              ...FONTS.h2,
-            }}>Contact Form<span style={{
-              color: COLORS.Primary
-            }}>.</span></p>
+            textAlign: 'left',
+            width: mobile ? "90%" : "100%",
+            ...FONTS.h2,
+          }}>Contact Form<span style={{
+            color: COLORS.Primary
+          }}>.</span></p>
           <Controller
             name='name'
             control={control}
