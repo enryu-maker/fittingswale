@@ -168,7 +168,9 @@ export default function Header() {
                                 cursor: "pointer",
                                 margin: 0,
                                 padding: 0,
-                            }}>
+                            }}
+                            onClick={() => navigate('/cart')}
+                            >
                                 <p style={{
                                     position: "absolute",
                                     color: COLORS.darkGray,

@@ -94,7 +94,7 @@ export const Data = {
                     "Scategory": [
                         {
                             "id": 15,
-                            "name": "auto hindges/L bihari hinges",
+                            "name": "auto hindges-L bihari hinges",
                             "items": []
                         },
                         {

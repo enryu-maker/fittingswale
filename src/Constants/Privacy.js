@@ -4,6 +4,12 @@ import { Link } from 'react-router-dom'
 import { PrivacyData } from './Data';
 export default function Privacy() {
     const [current, setCurrent] = React.useState(0);
+    React.useEffect(() => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        })
+    }, [])
     return (
         <div
             style={{

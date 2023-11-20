@@ -7,6 +7,7 @@ import Contact from './Screens/Home/Contact'
 import CatInfo from './Screens/Home/CatInfo'
 import ProdInfo from './Screens/Home/ProdInfo'
 import Privacy from './Constants/Privacy'
+import Cart from './Screens/Home/Cart'
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
       <Route path="/download" element={<Download />} />
       <Route path="/contact-us" element={<Contact />} />
       <Route path="/catinfo" element={<CatInfo />} />
+      <Route path="/cart" element={<Cart />} />
       <Route path="/privacy" element={<Privacy />} />
       <Route path="/catinfo/prodinfo/:pid" element={<ProdInfo />} />
       <Route path="/prodinfo/:pid" element={<ProdInfo />} />

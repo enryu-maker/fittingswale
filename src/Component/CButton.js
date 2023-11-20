@@ -1,5 +1,6 @@
 import React from 'react'
 import { COLORS, FONTS } from '../Assets/Theme'
+import { useNavigate } from 'react-router-dom';
 export default function CButton({
     title,
     data,
@@ -10,7 +11,7 @@ export default function CButton({
     const [cat, setCat] = React.useState(false);
     const [current, setCurrent] = React.useState(0);
     const [currentData, setCurrentData] = React.useState([]);
-
+    const Navigate = useNavigate();
     return (
         <>
             <button style={{
@@ -170,6 +171,15 @@ export default function CButton({
                                                 }}
                                                 onMouseLeave={(e) => {
                                                     e.target.style.color = COLORS.black;
+                                                }}
+                                                onClick={() => {
+                                                    Navigate(`prodinfo/${item.name}`, {
+                                                        state: {
+                                                            id: item.id,
+                                                            item: item,
+                                                            cat: "",
+                                                        }
+                                                    })
                                                 }}
                                             >
                                                 {item.name}

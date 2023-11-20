@@ -43,7 +43,11 @@ export default function ProdInfo() {
                 >
                     Home
                 </Link>
-                <p>/</p>
+                {
+                
+                cat ?
+                <p>/</p> : null
+                }
                 <p onClick={() => {
                     window.history.back();
                 }}
