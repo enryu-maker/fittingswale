@@ -11,8 +11,8 @@ export default function Contact() {
     window.scrollTo({
       top: 0,
       behavior: "smooth"
-  })
-}, [])
+    })
+  }, [])
   return (
     <div
       style={{
@@ -52,6 +52,7 @@ export default function Contact() {
         <p>/</p>
         <p>Contact Us</p>
       </div>
+      
       <div style={{
         width: "100%",
         height: mobile ? "auto" : "75%",

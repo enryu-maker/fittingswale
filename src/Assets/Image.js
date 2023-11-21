@@ -6,4 +6,5 @@ export const Images = {
     playstore: require('./Images/playstore.png'),
     appstore: require('./Images/appstore.png'),
     Banner: require('./Images/Banner.png'),
+    StarCoins: require('./Images/StarCoins.png'),
 }

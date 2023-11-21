@@ -4,19 +4,19 @@ import { Controller, useForm } from 'react-hook-form'
 import { AiOutlineSearch, AiOutlineUser, AiOutlineMobile, AiOutlineShoppingCart } from 'react-icons/ai'
 import { MdClear } from 'react-icons/md'
 import IconButton from './IconButton'
-import { FiPhoneCall } from 'react-icons/fi'
-import { LiaHandshakeSolid } from 'react-icons/lia'
 import useMediaQuery from './useMediaQuery'
 import { Link, useNavigate } from 'react-router-dom'
 import CButton from './CButton'
 import FlatList from 'flatlist-react/lib'
 import { Data } from '../Constants/Data'
 import Tab from './Tab'
+import { useSelector } from 'react-redux'
 export default function Header() {
     const { control } = useForm();
     const mobile = useMediaQuery('(max-width: 768px)');
     const navigate = useNavigate();
     const [search, setSearch] = React.useState("")
+    const access = useSelector(state => state.Reducers.access)
     return (
         <div style={{
             display: "flex",
@@ -181,6 +181,8 @@ export default function Header() {
                                 }}>0</p>
                                 <AiOutlineShoppingCart color={COLORS.Primary} size={30} />
                             </div>
+                            {
+                                access===null?
                             <IconButton
                                 Icon={AiOutlineUser}
                                 title="Login"
@@ -190,7 +192,18 @@ export default function Header() {
                                     ...FONTS.h4
                                 }}
                                 onClick={() => navigate('/auth')}
+                            /> :
+                            <IconButton
+                                Icon={AiOutlineUser}
+                                title="My Account"
+                                color={COLORS.black}
+                                textStyle={{
+                                    color: COLORS.black,
+                                    ...FONTS.h4
+                                }}
+                                onClick={() => navigate('/profile')}
                             />
+                            }
                             <IconButton
                                 Icon={AiOutlineMobile}
                                 // title="Download App"

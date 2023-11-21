@@ -8,16 +8,20 @@ import Header from './Component/Header';
 import Footer from './Component/Footer';
 import useMediaQuery from './Component/useMediaQuery';
 import Tab from './Component/Tab';
+import { Provider } from 'react-redux';
+import { store } from './Store';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
   <React.StrictMode>
-    <HashRouter>
-      <Header />
-      <App />
-      <Footer />
-    </HashRouter>
+    <Provider store={store}>
+      <HashRouter>
+        <Header />
+        <App />
+        <Footer />
+      </HashRouter>
+    </Provider>
   </React.StrictMode>
 );
 

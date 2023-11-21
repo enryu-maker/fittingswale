@@ -8,12 +8,14 @@ import CatInfo from './Screens/Home/CatInfo'
 import ProdInfo from './Screens/Home/ProdInfo'
 import Privacy from './Constants/Privacy'
 import Cart from './Screens/Home/Cart'
+import Profile from './Screens/Home/Profile'
 
 export default function App() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/auth" element={<AuthScreen />} />
+      <Route path="/profile" element={<Profile />} />
       <Route path="/download" element={<Download />} />
       <Route path="/contact-us" element={<Contact />} />
       <Route path="/catinfo" element={<CatInfo />} />

@@ -1,22 +1,85 @@
 import React from 'react'
-import { COLORS, FONTS } from '../Assets/Theme'
-import { Link } from 'react-router-dom'
-import { PrivacyData } from './Data';
-export default function Privacy() {
+import { Link, useNavigate } from 'react-router-dom'
+import { COLORS, FONTS } from '../../Assets/Theme'
+import { AddressScreen, CoinsScreen, CouponsScreen, OrdersScreen, ProfileScreen, RatingScreen, SettingScreen } from '../../Constants/ProfileContent';
+import { useDispatch } from 'react-redux';
+import { LogoutAction } from '../../Store/actions';
+
+export default function Profile() {
     const [current, setCurrent] = React.useState(0);
-    React.useEffect(() => {
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        })
-    }, [])
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
+    const data = [
+        {
+            id: 0,
+            title: "Profile",
+        },
+        {
+            id: 1,
+            title: "StarCoins",
+        },
+        {
+            id: 2,
+            title: "Order History",
+        },
+        {
+            id: 3,
+            title: "Address",
+        },
+        {
+            id: 4,
+            title: "Coupons",
+        },
+        {
+            id: 5,
+            title: "Rating & Reviews",
+        },
+        {
+            id: 6,
+            title: "Settings",
+        },
+    ]
+
+    function currentSection() {
+        switch (current) {
+            case 0:
+                return (
+                    <ProfileScreen />
+                )
+            case 1:
+                return (
+                    <CoinsScreen />
+                )
+            case 2:
+                return (
+                    <OrdersScreen />
+                )
+            case 3:
+                return (
+                    <AddressScreen />
+                )
+            case 4:
+                return (
+                    <CouponsScreen />
+                )
+            case 5:
+                return (
+                    <RatingScreen />
+                )
+            case 6:
+                return (
+                    <SettingScreen />
+                )
+            default:
+        }
+    }
+
     return (
         <div
             style={{
                 display: 'flex',
                 flexDirection: 'column',
                 alignItems: 'center',
-                // justifyContent: 'center',
                 backgroundColor: "#f5f5f5",
                 width: "100vw",
             }}
@@ -47,29 +110,17 @@ export default function Privacy() {
                     Home
                 </Link>
                 <p>/</p>
-                <p>Privacy Policy</p>
+                <p>My Account</p>
             </div>
             <p style={{
                 ...FONTS.h1,
                 color: COLORS.black,
-                textAlign: "center",
+                // textAlign: "left",
                 marginBlock: 0,
+                // width: "88%",
+                textTransform: "capitalize",
             }}>
-                Privacy Policy<span style={{ color: COLORS.Primary }}>.</span>
-            </p>
-            <p style={{
-                ...FONTS.h5,
-                color: COLORS.black,
-                textAlign: "center",
-                marginBlock: 0,
-            }}>
-                Disclaimer: <span style={{
-                    color: COLORS.gray,
-                    fontFamily: "Poppins-Italic",
-                    fontSize: 12
-                }}>
-                    In the event of any discrepancy or conflict, the English version will prevail over the translation.We don’t share personal information.
-                </span>
+                My Account<span style={{ color: COLORS.Primary }}>.</span>
             </p>
             <div style={{
                 display: 'flex',
@@ -78,7 +129,7 @@ export default function Privacy() {
                 justifyContent: 'center',
                 width: "100%",
                 backgroundColor: COLORS.white,
-                // height: "60vh",
+                height: "60vh",
                 paddingBlock: 20,
                 marginBlock: 40,
             }}>
@@ -91,7 +142,7 @@ export default function Privacy() {
                     flexDirection: "column",
                 }}>
                     {
-                        PrivacyData.map((item, index) => {
+                        data.map((item, index) => {
                             return (
                                 <div key={index} style={{
                                     width: "90%",
@@ -105,7 +156,6 @@ export default function Privacy() {
                                     alignSelf: "center",
                                     paddingInline: 5,
                                     paddingBlock: 2,
-                                    // borderRadius: 5,
                                     ...FONTS.h4,
                                     cursor: "pointer",
                                     textTransform: "capitalize",
@@ -123,37 +173,51 @@ export default function Privacy() {
                                             marginBlock: 0,
                                             width: "90%",
                                             alignSelf: "center",
-                                        }}>{item.section}</p>
+                                        }}>{item.title}</p>
                                 </div>
                             )
-                        }
-                        )
+                        })
                     }
+                    <div style={{
+                        width: "90%",
+                        height: "8%",
+                        display: "flex",
+                        flexDirection: "row",
+                        alignItems: "center",
+                        justifyContent: "flex-start",
+                        color: COLORS.red,
+                        alignSelf: "center",
+                        paddingInline: 5,
+                        paddingBlock: 2,
+                        // borderRadius: 5,
+                        ...FONTS.h4,
+                        cursor: "pointer",
+                        textTransform: "capitalize",
+                        marginBlock: 5
+                    }}
+                    >
+                        <p
+                            onClick={() => {
+                                dispatch(LogoutAction());
+                                navigate("/");
+                            }}
+                            style={{
+                                textAlign: "left",
+                                marginBlock: 0,
+                                width: "90%",
+                                alignSelf: "center",
+                            }}>Logout</p>
+                    </div>
+
                 </div>
                 <div style={{
-                    width: "72%",
+                    width: "75%",
                     height: "100%",
                     paddingInline: 20,
+                    display: "flex",
+                    flexDirection: "column",
                 }}>
-                    <p style={{
-                        ...FONTS.h2,
-                        color: COLORS.gray,
-                        textAlign: "left",
-                        width: "88%",
-                        textTransform: "capitalize",
-                    }}>
-                        {PrivacyData[current]?.section}<span style={{ color: COLORS.Primary }}>.</span>
-                    </p>
-                    {
-                        PrivacyData[current]?.content.map((item, index) => (
-                            <p style={{
-                                ...FONTS.body3
-                            }}>
-                                {item}
-                            </p>
-
-                        ))
-                    }
+                    {currentSection()}
                 </div>
             </div>
         </div>

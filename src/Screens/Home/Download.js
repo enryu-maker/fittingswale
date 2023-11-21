@@ -55,6 +55,16 @@ export default function Download() {
                 <p>/</p>
                 <p>Download App</p>
             </div>
+            <p style={{
+                ...FONTS.h1,
+                color: COLORS.black,
+                // textAlign: "left",
+                marginBlock: 0,
+                // width: "88%",
+                textTransform: "capitalize",
+            }}>
+                Download<span style={{ color: COLORS.Primary }}>.</span>
+            </p>
             <div style={{
                 width: "100%",
                 height: "60vh",
