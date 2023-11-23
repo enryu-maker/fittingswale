@@ -9,12 +9,18 @@ import ProdInfo from './Screens/Home/ProdInfo'
 import Privacy from './Constants/Privacy'
 import Cart from './Screens/Home/Cart'
 import Profile from './Screens/Home/Profile'
+import Terms from './Constants/Terms'
+import Refund from './Constants/Refund'
+import About from './Constants/About'
 
 export default function App() {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
+      <Route path="/" element={<Home />}  />
       <Route path="/auth" element={<AuthScreen />} />
+      <Route path="/terms" element={<Terms />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/refund" element={<Refund />} />
       <Route path="/profile" element={<Profile />} />
       <Route path="/download" element={<Download />} />
       <Route path="/contact-us" element={<Contact />} />

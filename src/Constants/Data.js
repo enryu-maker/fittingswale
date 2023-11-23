@@ -808,3 +808,270 @@ export const PrivacyData = [
         ]
     }
 ]
+
+export const TermsData = [
+    {
+        "section": "Terms & Conditions",
+        "content": [
+            "The portal, www.fittingswale.com (“Website”) and the mobile application ‘fittingswale’ (“App”) (collectively “Platforms'') is managed and operated by Mittal enterprises (“fittingswale” or “We”), a proprietorship firm with its registered office located at mittal bhawan gol building manaitand dhanbad Jharkhand – 826001 India. Fittingswale is inter alia engaged in the business of wholesale and retail trade in home improvement sector and sale of their allied and auxiliary products (“Products''), through brick and mortar stores and through its Platforms and providing other home design and decor solutions (collectively as “Services”) to the users of the Platforms (“User” or “You” or “Your”)  this website, including all information, tools and services available from this site to you, the user, conditioned upon your acceptance of all terms, conditions, policies and notices stated here.",
+            "By visiting our site and/ or purchasing something from us, you engage in our “Service” and agree to be bound by the following terms and conditions (“Terms of Service”, “Terms”), including those additional terms and conditions and policies referenced herein and/or available by hyperlink. These Terms of Service apply to all users of the site, including without limitation users who are browsers, vendors, customers, merchants, and/ or contributors of content,etc.",
+            "Please read these Terms of Service carefully before accessing or using our website. By accessing or using any part of the site, you agree to be bound by these Terms of Service. If you do not agree to all the terms and conditions of this agreement, then you may not access the website or use any services. If these Terms of Service are considered an offer, acceptance is expressly limited to these Terms of Service.",
+            "Any new features or tools which are added to the current store shall also be subject to the Terms of Service. You can review the most current version of the Terms of Service at any time on this page. We reserve the right to update, change or replace any part of these Terms of Service by posting updates and/or changes to our website. It is your responsibility to check this page periodically for changes. Your continued use of or access to the website following the posting of any changes constitutes acceptance of those changes.",
+        ]
+    },
+    {
+        "section": "SECTION 1 - ONLINE STORE TERM",
+        "content": [
+            "By agreeing to these Terms of Service, you represent that you are at least the age of majority in your state or province of residence, or that you are the age of majority in your state or province of residence and you have given us your consent to allow any of your minor dependents to use this site.",
+            "You may not use our products for any illegal or unauthorized purpose nor may you, in the use of the Service, violate any laws in your jurisdiction (including but not limited to copyright)",
+            "You must not transmit any worms or viruses or any code of a destructive nature.",
+            "A breach or violation of any of the Terms will result in an immediate termination of your Services."
+        ]
+    },
+    {
+        "section": "SECTION 2 - GENERAL CONDITIONS",
+        "content": [
+            "We reserve the right to refuse service to anyone for any reason at any time.",
+            "You understand that your content (not including credit card information), may be transferred unencrypted and involve (a) transmissions over various networks; and (b) changes to conform and adapt to technical requirements of connecting networks or devices. Credit card information is always encrypted during transfer over networks.",
+            "You agree not to reproduce, duplicate, copy, sell, resell or exploit any portion of the Service, use of the Service, or access to the Service or any contact on the website through which the service is provided, without express written permission by us.",
+            "The headings used in this agreement are included for convenience only and will not limit or otherwise affect these Terms."
+        ]
+    },
+    {
+        "section": "SECTION 3 - ACCURACY, COMPLETENESS AND TIMELINESS OF INFORMATION",
+        "content": [
+            "We are not responsible if information made available on this site is not accurate, complete or current. The material on this site is provided for general information only and should not be relied upon or used as the sole basis for making decisions without consulting primary, more accurate, more complete or more timely sources of information. Any reliance on the material on this site is at your own risk.",
+            "This site may contain certain historical information. Historical information, necessarily, is not current and is provided for your reference only. We reserve the right to modify the contents of this site at any time, but we have no obligation to update any information on our site. You agree that it is your responsibility to monitor changes to our site."
+        ]
+    },
+    {
+        "section": "SECTION 4 - MODIFICATIONS TO THE SERVICE AND PRICES",
+        "content": [
+            "Prices for our products are subject to change without notice.",
+            "We reserve the right at any time to modify or discontinue the Service (or any part or content thereof) without notice at any time.",
+            "We shall not be liable to you or to any third-party for any modification, price change, suspension or discontinuance of the Service."
+        ]
+    },
+    {
+        "section": "SECTION 5 - PRODUCTS OR SERVICES (if applicable)",
+        "content": [
+            "Certain products or services may be available exclusively online through the website. These products or services may have limited quantities and are subject to return or exchange only according to our Return Policy.",
+            "We have made every effort to display as accurately as possible the colors and images of our products that appear at the store. We cannot guarantee that your computer monitor's display of any color will be accurate.",
+            "We reserve the right, but are not obligated, to limit the sales of our products or Services to any person, geographic region or jurisdiction. We may exercise this right on a case-by-case basis. We reserve the right to limit the quantities of any products or services that we offer. All descriptions of products or product pricing are subject to change at anytime without notice, at the sole discretion of us. We reserve the right to discontinue any product at any time. Any offer for any product or service made on this site is void where prohibited.",
+            "We do not warrant that the quality of any products, services, information, or other material purchased or obtained by you will meet your expectations, or that any errors in the Service will be corrected."
+        ]
+    },
+    {
+        "section": "SECTION 6 - ACCURACY OF BILLING AND ACCOUNT INFORMATION",
+        "content": [
+            "We reserve the right to refuse any order you place with us. We may, in our sole discretion, limit or cancel quantities purchased per person, per household or per order. These restrictions may include orders placed by or under the same customer account, the same credit card, and/or orders that use the same billing and/or shipping address. In the event that we make a change to or cancel an order, we may attempt to notify you by contacting the e-mail and/or billing address/phone number provided at the time the order was made. We reserve the right to limit or prohibit orders that, in our sole judgment, appear to be placed by dealers, resellers or distributors.",
+            "You agree to provide current, complete and accurate purchase and account information for all purchases made at our store. You agree to promptly update your account and other information, including your email address and credit card numbers and expiration dates, so that we can complete your transactions and contact you as needed.",
+            "For more detail, please review our Returns Policy."
+        ]
+    },
+    {
+        "section": "SECTION 7 - OPTIONAL TOOLS",
+        "content": [
+            "We may provide you with access to third-party tools over which we neither monitor nor have any control nor input.",
+            "You acknowledge and agree that we provide access to such tools”as is” and “as available” without any warranties, representations or conditions of any kind and without any endorsement. We shall have no liability whatsoever arising from or relating to your use of optional third-party tools.",
+            "Any use by you of optional tools offered through the site is entirely at your own risk and discretion and you should ensure that you are familiar with and approve of the terms on which tools are provided by the relevant third-party provider(s).",
+            "We may also, in the future, offer new services and/or features through the website (including, the release of new tools and resources). Such new features and/or services shall also be subject to these Terms of Service."
+        ]
+    },
+    {
+        "section": "SECTION 8 - THIRD-PARTY LINKS",
+        "content": [
+            "Certain content, products and services available via our Service may include materials from third-parties.",
+            "Third-party links on this site may direct you to third-party websites that are not affiliated with us. We are not responsible for examining or evaluating the content or accuracy and we do not warrant and will not have any liability or responsibility for any third-party materials or websites, or for any other materials, products, or services of third-parties.",
+            "We are not liable for any harm or damages related to the purchase or use of goods, services, resources, content, or any other transactions made in connection with any third-party websites. Please review carefully the third-party's policies and practices and make sure you understand them before you engage in any transaction. Complaints, claims, concerns, or questions regarding third-party products should be directed to the third-party."
+        ]
+    },
+    {
+        "section": "SECTION 9 - USER COMMENTS, FEEDBACK AND OTHER SUBMISSIONS",
+        "content": [
+            "If, at our request, you send certain specific submissions (for example contest entries) or without a request from us you send creative ideas, suggestions, proposals, plans, or other materials, whether online, by email, by postal mail, or otherwise (collectively, 'comments'), you agree that we may, at any time, without restriction, edit, copy, publish, distribute, translate and otherwise use in any medium any comments that you forward to us. We are and shall be under no obligation (1) to maintain any comments in confidence; (2) to pay compensation for any comments; or (3) to respond to any comments.",
+            "We may, but have no obligation to, monitor, edit or remove content that we determine in our sole discretion are unlawful, offensive, threatening, libelous, defamatory, pornographic, obscene or otherwise objectionable or violates any party’s intellectual property or these Terms of Service.",
+            "You agree that your comments will not violate any right of any third-party, including copyright, trademark, privacy, personality or other personal or proprietary right. You further agree that your comments will not contain libelous or otherwise unlawful, abusive or obscene material, or contain any computer virus or other malware that could in any way affect the operation of the Service or any related website. You may not use a false e-mail address, pretend to be someone other than yourself, or otherwise mislead us or third-parties as to the origin of any comments. You are solely responsible for any comments you make and their accuracy. We take no responsibility and assume no liability for any comments posted by you or any third-party."
+        ]
+    },
+    {
+        "section": "SECTION 10 - PERSONAL INFORMATION",
+        "content": [
+            "Your submission of personal information through the store is governed by our Privacy Policy. To view our Privacy Policy."
+        ]
+    },
+    {
+        "section": "SECTION 11 - ERRORS, INACCURACIES AND OMISSIONS",
+        "content": [
+            "Occasionally there may be information on our site or in the Service that contains typographical errors, inaccuracies or omissions that may relate to product descriptions, pricing, promotions, offers, product shipping charges, transit times and availability. We reserve the right to correct any errors, inaccuracies or omissions, and to change or update information or cancel orders if any information in the Service or on any related website is inaccurate at any time without prior notice (including after you have submitted your order).",
+            "We undertake no obligation to update, amend or clarify information in the Service or on any related website, including without limitation, pricing information, except as required by law. No specified update or refresh date applied in the Service or on any related website, should be taken to indicate that all information in the Service or on any related website has been modified or updated."
+        ]
+    },
+    {
+        "section": "SECTION 12 - PROHIBITED USES",
+        "content": [
+            " In addition to other prohibitions as set forth in the Terms of Service, you are prohibited from using the site or its content: (a) for any unlawful purpose; (b) to solicit others to perform or participate in any unlawful acts; (c) to violate any international, federal, provincial or state regulations, rules, laws, or local ordinances; (d) to infringe upon or violate our intellectual property rights or the intellectual property rights of others; (e) to harass, abuse, insult, harm, defame, slander, disparage, intimidate, or discriminate based on gender, sexual orientation, religion, ethnicity, race, age, national origin, or disability; (f) to submit false or misleading information; (g) to upload or transmit viruses or any other type of malicious code that will or may be used in any way that will affect the functionality or operation of the Service or of any related website, other websites, or the Internet; (h) to collect or track the personal information of others; (i) to spam, phish, pharm, pretext, spider, crawl, or scrape; (j) for any obscene or immoral purpose; or (k) to interfere with or circumvent the security features of the Service or any related website, other websites, or the Internet. We reserve the right to terminate your use of the Service or any related website for violating any of the prohibited uses."
+        ]
+    },
+    {
+        "section": "SECTION 13 - DISCLAIMER OF WARRANTIES; LIMITATION OF LIABILITY",
+        "content": [
+            "We do not guarantee, represent or warrant that your use of our service will be uninterrupted, timely, secure or error-free.",
+            "We do not warrant that the results that may be obtained from the use of the service will be accurate or reliable.",
+            "You agree that from time to time we may remove the service for indefinite periods of time or cancel the service at any time, without notice to you.",
+            "You expressly agree that your use of, or inability to use, the service is at your sole risk. The service and all products and services delivered to you through the service are (except as expressly stated by us) provided 'as is' and 'as available' for your use, without any representation, warranties or conditions of any kind, either express or implied, including all implied warranties or conditions of merchantability, merchantable quality, fitness for a particular purpose, durability, title, and non-infringement.",
+            "In no case shall fittingswale, our directors, officers, employees, affiliates, agents, contractors, interns, suppliers, service providers or licensors be liable for any injury, loss, claim, or any direct, indirect, incidental, punitive, special, or consequential damages of any kind, including, without limitation lost profits, lost revenue, lost savings, loss of data, replacement costs, or any similar damages, whether based in contract, tort (including negligence), strict liability or otherwise, arising from your use of any of the service or any products procured using the service, or for any other claim related in any way to your use of the service or any product, including, but not limited to, any errors or omissions in any content, or any loss or damage of any kind incurred as a result of the use of the service or any content (or product) posted, transmitted, or otherwise made available via the service, even if advised of their possibility. Because some states or jurisdictions do not allow the exclusion or the limitation of liability for consequential or incidental damages, in such states or jurisdictions, our liability shall be limited to the maximum extent permitted by law."
+        ]
+    },
+    {
+        "section": "SECTION 14 - INDEMNIFICATION",
+        "content": [
+            "You agree to indemnify, defend and hold harmless fittingswale and our parent, subsidiaries, affiliates, partners, officers directors, agents, contractors, licensors, service providers, subcontractors, suppliers, interns and employees, harmless from any claim or demand, including reasonable attorneys’ fees, made by any third-party due to or arising out of your breach of these Terms of Service or the documents they incorporate by reference, or your violation of any law or the rights of a third-party."
+        ]
+    },
+    {
+        "section": "SECTION 15 - SEVERABILITY",
+        "content": [
+            "In the event that any provision of these Terms of Service is determined to be unlawful, void or unenforceable, such provision shall nonetheless be enforceable to the fullest extent permitted by applicable law, and the unenforceable portion shall be deemed to be severed from these Terms of Service, such determination shall not affect the validity and enforceability of any other remaining provisions."
+        ]
+    },
+    {
+        "section": "SECTION 16 - TERMINATION",
+        "content": [
+            "The obligations and liabilities of the parties incurred prior to the termination date shall survive the termination of this agreement for all purposes.",
+            "These Terms of Service are effective unless and until terminated by either you or us. You may terminate these Terms of Service at any time by notifying us that you no longer wish to use our Services, or when you cease using our site.",
+            "If in our sole judgment you fail, or we suspect that you have failed, to comply with any term or provision of these Terms of Service, we also may terminate this agreement at any time without notice and you will remain liable for all amounts due up to and including the date of termination; and/or accordingly may deny you access to our Services (or any part thereof)."
+        ]
+    },
+    {
+        "section": "SECTION 17 - ENTIRE AGREEMENT",
+        "content": [
+            "The failure of us to exercise or enforce any right or provision of these Terms of Service shall not constitute a waiver of such right or provision.",
+            "These Terms of Service and any policies or operating rules posted by us on this site or in respect to The Service constitutes the entire agreement and understanding between you and us and govern your use of the Service, superseding any prior or contemporaneous agreements, communications and proposals, whether oral or written, between you and us (including, but not limited to, any prior versions of the Terms of Service).",
+            "Any ambiguities in the interpretation of these Terms of Service shall not be construed against the drafting party."
+        ]
+    },
+    {
+        "section": "SECTION 18 - GOVERNING LAW",
+        "content": [
+            "These Terms of Service and any separate agreements whereby we provide you Services shall be governed by and construed in accordance with the laws of India and jurisdiction of courts in Dhanbad, Jharkhand."
+        ]
+    },
+    {
+        "section": "SECTION 19 - CHANGES TO TERMS OF SERVICE",
+        "content": [
+            "You can review the most current version of the Terms of Service at any time at this page.",
+            "We reserve the right, at our sole discretion, to update, change or replace any part of these Terms of Service by posting updates and changes to our website. It is your responsibility to check our website periodically for changes. Your continued use of or access to our website or the Service following the posting of any changes to these Terms of Service constitutes acceptance of those changes."
+        ]
+    },
+    {
+        "section": "SECTION 20 - CONTACT INFORMATION",
+        "content": [
+            "Questions about the Terms of Service should be sent to us at `support@fittinswale.com`."
+        ]
+    }
+]
+
+export const ReturnPolicyData = [
+
+    {
+        "section": "INTRODUCTION",
+        "content": [
+            "The portal, www.fittingswale.com (“Website”) and the mobile application ‘fittingswale’ (“App”) (collectively “Platforms”) is managed and operated by Mittal enterprises (“fittingswale” or “We”), a proprietorship firm with its registered office located at mittal bhawan gol building manaitand dhanbad Jharkhand – 826001 India. Fittingswale is inter alia engaged in the business of wholesale and retail trade in home improvement sector and sale of their allied and auxiliary products (“Products”), through brick and mortar stores and through its Platforms and providing other home design and decor solutions (collectively as “Services”) to the users of the Platforms (“User” or “You” or “Your”) "
+        ]
+
+    },
+    {
+        "section": "OBJECTIVES OF THIS POLICY",
+        "content": [
+            "2.1. In keeping with fittingswale goal of ensuring User satisfaction, this cancellation, return and refund policy (“Cancellation, Return and Refund Policy”), together with the terms of use at www.fittingswale.com , sets out fittingswale procedures and policies in accepting: (a) Product cancellations before the Product is delivered to a User; or (b) Product returns, once a Product has been delivered to a User after purchase from the Platforms. Any return or cancellation of Products by Users shall be governed by and subject to the terms and conditions set out under this Cancellation, Return and Refund Policy.",
+            "2.2. Users are required to peruse and understand the terms of this Cancellation, Return and Refund Policy. If you do not agree to the terms contained in this Cancellation, Return and Refund Policy, You are advised not to accept the terms of use and may forthwith leave and stop using the Platforms. The terms contained in this Cancellation, Return and Refund Policy shall be accepted without modification and You agree to be bound by the terms contained herein by initiating a request for purchase of Product(s) on the Platforms.",
+            "Cancellations",
+            " Fittingswale is committed to ensuring the timely delivery of your orders. If, however, you have mistakenly ordered the wrong product, you may request a cancellation through your Fittingswale Account.Refunds will be processed in accordance with our Refund Policy. Please be aware that cancellation requests cannot be accommodated once an order has been dispatched.",
+            "Step to Follow",
+            "Login to your Fittingswale account",
+            "Login --> My Order --> Select Reason --> Cancel Order",
+            "Please Note:",
+            "·We will initiate the refund process in accordance with our Refund Policy. Your understanding and cooperation in this matter are greatly appreciated.",
+            "·Please note that once your order has been dispatched, we are unable to accept cancellation requests. Thank you for your understanding.",
+            "Order Cancelations Criteria",
+            "Under some rare situations Fittingswale can also raise an order cancellation request. These Situation would be :-",
+            `·Unavailability of Products`,
+            `·Incorrect pricing or description of the Products`,
+            `·Payment fraud suspicion by our Credit & Fraud avoidance department`,
+            `·Non Serviceability of buyer’s address by our Logistics partner ,ETC.`,
+            `Create an Unboxing Video`,
+            `Fittingswale is excited to introduce a unique concept that connects buyers directly with brands. To make this experience even better, we kindly request our valued buyers to consider creating an Unboxing Video after receiving their delivery. Your contribution in this regard is highly appreciated, as it allows us to address any unexpected issues with the product at our operational level. Together, we can ensure that you have the best possible experience with us.`,
+            `Why Consider Creating an Unboxing Video upon Receiving Your Order?`,
+            ` We sincerely encourage our valued customers to contemplate creating an unboxing video when they receive their orders, and here's why it would be truly wonderful:`,
+            `·Share the Excitement: Your genuine enthusiasm and initial reactions can serve as a source of inspiration for others and foster excitement about our products.`,
+            `·Helpful Insights: Your video can offer invaluable insights for prospective buyers, providing them with a better grasp of the product and its features, aiding in informed decisions.`,
+            `·Join the Community: By sharing your unboxing video, you become an integral part of our ever-growing community of satisfied customers. We take immense pleasure in featuring our customers' content on our social media platforms and website.`,
+            "Returns",
+            "We are dedicated to safeguarding our customers' interests, and to ensure your satisfaction, we provide a straightforward and hassle-free product return process, whenever it is necessary"
+        ]
+    },
+    {
+        "section": "TERMS OF CANCELLATION",
+        "content": [
+            "3.1) Cancellation before dispatch",
+            "3.1.1) A User is permitted to fully or partially cancel orders prior to its dispatch from fittingswale",
+            "3.1.2) The user will be given a unique order ID which can be used by him/her to track the status of the order.",
+            "3.1.3) Prior to the invoicing of the purchased Products, should the User decide to cancel the purchase, the User can do so through App/website in the my order section.",
+            "3.1.4) Refund. In all events of cancellation, prior to the dispatch of the purchased Products, Depo24 shall initiate refunds within 7(seven) business days from the date on which it received the request from the User.",
+            "3.1.5) In case of payment made through prepaid mode through any channel, the refund will be made to the original mode of payment and/or to User’s Fittingswale wallet. All refunds shall be subject to applicable charges as may be deducted by the User’s bank",
+            "3.2) Cancellation after dispatch. Only accepted in case of (subject to the approval of fittingswale return team after getting the unboxing video of the products) :-",
+            "-Wrong product – wrong colour/size/style",
+            "-Wrong item Delivered",
+            "-Defective products – Manufacturing defect/ Non – functioning (Not applicable, if the product is under Manufacturer warranty)",
+            "-Damaged product – Physical damage/Tampered product or packaging",
+            "-Wrong Quantities – Missing products/parts",
+            "Return/Replacement are not accepted under the following cases:",
+            "-Product Alteration or Usage: We are unable to accept returns or replacements for products that have been altered or used.",
+            "-Absence of Original Packaging: To process returns or replacements, it is essential that the product is returned in its original packaging, including price tags, labels, accessories, and the original box.",
+            "-Tampered Serial Number/Label: If the serial number or label of the product has been tampered with, we cannot proceed with a return or replacement.",
+            "-Delay in Reporting Issues: For cases involving damaged, missing, empty packages, or receiving the wrong product, we kindly ask that you report these concerns within 2 days of delivery for us to be able to assist you.",
+            "-Promotional/Demand-Based Sales: Products sold under specific promotions or during high-demand periods may not be eligible for return or replacement.",
+            "-No Longer Needed/Quality Concerns: Returns or replacements will not be accepted if the product is deemed no longer needed or if the quality does not meet expectations",
+            "-Unable to provide the unboxing video:- as we requested to make the unboxing video upon delivery of the product before opening so if such video will not be given then no refund will be accepted."
+        ]
+    },
+    {
+        "section": "REFUND",
+        "content": [
+            `Fittingswale offers easy and quick Refund on your refund Orders.`,
+            `On certain select days as specified by fittingswale, separate policies may be applicable.`,
+            `The Products will be picked up within the timelines intimidated by fittingswale.`,
+            `If a User has purchased Products which form a part of a package of other Products, or if the Product forms a part of a promotional package (collectively, the “Bundled Package”), the User shall be required to return all the Products that form a part of the Bundled Package for fittingswale to process refunds.`,
+             
+            `Refunds are generally initiated in the following scenarios:`,
+            `·         When Orders are cancelled as per our Cancellation policy`,
+            `·         If our Logistics partner is unable to deliver the product`,
+            `·         If you wish to return the products in accordance with our return policy`,
+            `Refund gets Declined in the following scenarios:`,
+            `·         Return request is made outside the specified time frame of 2 days.`,
+            `·         If the Product is damaged by the customer, in any manner as may be determined by fittingswale at its sole discretion.`,
+            `·         If the product received by us is not as per claim or missing accessories, label, stickers,etc.`,
+            `·         the serial number / barcode of the Product, as applicable, does not match fittingswale records;`,
+            `·         the accessories delivered with the Product (such as user manuals, etc) are not returned along with the Product, in an undamaged condition`,
+            `·         there are any dents, scratches, tears or any other damage to the Products or any part thereof;`,
+            `·         the gifts accompanying the purchased Product have not been returned, or upon being returned, show signs of being used, washed, or defect;`,
+            `·         Fittingswale is satisfied that the Product has been rendered defective or unusable;`,
+            `·         if the User in any way breaches the Cancellation, Return and Refund Policy;`,
+            `·         the Product has been used, fittingswale shall reserve the right to reject the return of the Product;`,
+            `In the event a User returns a Product that is not accompanied by the accessories or other items originally bundled with such Product, fittingswale shall have the right, exercisable at its sole discretion, to (i) (a) refuse to accept the return of such Product, or (b) process any refund thereof, or (ii) deduct the amount payable in respect of such items from the amount of refund such User is entitled to.`,
+            `It is expressly clarified that the refund entitled to by a User shall include monies paid towards shipping charges or any other such charges applicable from time to time. Delivery charges applied on these products shall not be refunded.`,
+            `In events where fittingswale  is unable to facilitate a pick-up of the purchased Product for return from the User, the User is required to self-ship the Product to fittingswale shipping warehouse, the address for which will be intimated to the User upon the User placing such request for return. Upon self-shipping the Product to fittingswale warehouse, the User shall be required to scan the courier/postal receipt to support@fittingswale.com  for fittingswale records. The aforesaid return by self-shipping the Products is subject to the returned Products passing quality check at fittingswale returns desk/warehouse as provided .In the event where the User claims to have self-shipped the Product in accordance with the process set out above and fittingswale does not receive the returned Product or the package containing such Product is empty, the User shall be required to submit the ‘proof of delivery’ received from the courier/postal agency to fittingswale to prove his/her claim of return of Products through self-shipment to fittingswale. It is specifically clarified that any refunds shall be processed by fittingswale only upon receiving the returned Products and concluding required quality checks as provided or receiving the ‘proof of delivery’ from the User, as the case may be.`,
+           ` How Refund process follow:`,
+            `·         Prepaid Orders: Refunds for prepaid orders will be processed through a secure payment gateway or any other online banking/electronic funds transfer system approved by the Reserve Bank of India (RBI) and/or the User’s fittingswale Wallet within such reasonable time (subject to the policies of the User’s bank in case of bank account/credit card refunds) from the date on which fittingswale initiates the refund.. The refunded amount will be credited to the same account from which the transaction was made during the product purchase.`,
+            `·         Cash on Delivery Transactions: In the case of cash on delivery transactions, if a refund is applicable, it will be disbursed via methods such as fittingswale shall process all refunds into either the User’s fittingswale Wallet or demand drafts, NEFT (National Electronic Funds Transfer), or cheques. These will be issued in favour of the customer who made the product purchase, following the details provided by the customer.`,
+            `Refund Processing Timelines:`,
+            `After placing a refund request, the amount will be refunded to the customer based on the payment mode chosen by the customer at the time of placing the order.Refunds depend upon the Mode of payment`,
+            `In case of any Clarification or If you have not received the refund within the stipulated time, kindly contact your banks customer care number to know the status of the transaction.`,
+            `Any grievances relating to the Cancellation, Return and Refund Policy may be directed by You to support@fittingswale.com.`,
+        ]
+    }
+
+
+
+]
