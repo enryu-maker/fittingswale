@@ -1,7 +1,10 @@
 import React from 'react'
 import { COLORS } from '../Assets/Theme'
 import { CiHome, CiBoxList, CiUser, CiShoppingCart } from "react-icons/ci";
+import { useLocation, useNavigate } from 'react-router-dom';
 export default function Tab() {
+    const navigate = useNavigate();
+    const location = useLocation();
     return (
         <div
             style={{
@@ -24,10 +27,22 @@ export default function Tab() {
                     width: "90%",
                 }}
             >
-                <CiHome size={30} />
-                <CiBoxList size={30} />
-                <CiUser size={30} />
-                <CiShoppingCart size={30} />
+                <CiHome 
+                color={location.pathname === "/" ? COLORS.Primary : COLORS.darkGray}
+                onClick={() => navigate("/")}
+                size={30} />
+                <CiBoxList
+                color={location.pathname === "/cat" ? COLORS.Primary : COLORS.darkGray}
+                onClick={() => navigate("/cat")}
+                size={30} />
+                <CiShoppingCart 
+                color={location.pathname === "/cart" ? COLORS.Primary : COLORS.darkGray}
+                onClick={() => navigate("/cart")}
+                size={30} />
+                <CiUser 
+                color={location.pathname === "/more" ? COLORS.Primary : COLORS.darkGray}
+                onClick={() => navigate("/more")}
+                size={30} />
             </div>
         </div>
     )

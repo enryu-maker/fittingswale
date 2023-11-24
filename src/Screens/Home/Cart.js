@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom'
 import { COLORS, FONTS } from '../../Assets/Theme'
 import VerticalCard from '../../Component/VerticalCard';
 import TextButton from '../../Component/TextButton';
+import useMediaQuery from '../../Component/useMediaQuery';
 export default function Cart() {
     React.useEffect(() => {
         window.scrollTo({
@@ -10,6 +11,7 @@ export default function Cart() {
             behavior: "smooth"
         })
     }, [])
+    const mobile = useMediaQuery('(max-width: 768px)');
     return (
         <div
             style={{
@@ -68,19 +70,30 @@ export default function Cart() {
             <div style={{
                 width: "92%",
                 display: "flex",
-                flexDirection: "row",
-                alignItems: "flex-start",
+                flexDirection: mobile?"column" : "row",
+                alignItems:mobile?"center" : "flex-start",
                 justifyContent: "space-between",
                 marginBlock: 40,
-                height: "65vh",
+                height: mobile?"auto" : "65vh",
             }}>
-                <div style={{
-                    width: "70%",
+                <div 
+                
+                style={
+                    mobile?{
+                        width:"98%",
+                        display: "flex",
+                        flexDirection: "column",
+                        alignItems: "center",
+                        height: "100%",
+                    }:
+                    {
+                    width:"70%",
                     display: "flex",
                     flexDirection: "column",
                     alignItems: "center",
                     height: "100%",
-                    overflowY: "scroll",
+                    overflowY:"scroll",
+                    justifyContent: "space-evenly",
                 }}>
                     <VerticalCard />
                     <VerticalCard />
@@ -88,12 +101,12 @@ export default function Cart() {
                     <VerticalCard />
                 </div>
                 <div style={{
-                    width: "28%",
+                    width: mobile? "98%" : "28%",
                     display: "flex",
                     flexDirection: "column",
                     backgroundColor: COLORS.white,
                     alignItems: "center",
-                    // height: "60%",
+                    height: "60%",
                     paddingBlock: 20,
                     justifyContent: "space-evenly",
                     borderRadius: 10,

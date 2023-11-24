@@ -12,12 +12,18 @@ import Profile from './Screens/Home/Profile'
 import Terms from './Constants/Terms'
 import Refund from './Constants/Refund'
 import About from './Constants/About'
+import Cat from './Screens/Mobile.js/Cat'
+import More from './Screens/Mobile.js/More'
+import MoreInfo from './Screens/Mobile.js/MoreInfo'
 
 export default function App() {
   return (
     <Routes>
       <Route path="/" element={<Home />}  />
       <Route path="/auth" element={<AuthScreen />} />
+      <Route path="/cat" element={<Cat />} />
+      <Route path="/more" element={<More />} />
+      <Route path="/moreinfo" element={<MoreInfo />} />
       <Route path="/terms" element={<Terms />} />
       <Route path="/about" element={<About />} />
       <Route path="/refund" element={<Refund />} />

@@ -45,19 +45,23 @@ export default function Header() {
                             <Link
                                 to={'/'}
                                 style={{ textDecoration: "none", color: COLORS.black, marginBlock: 0, ...FONTS.h1 }}>Fittings<span style={{ ...FONTS.body1, color: COLORS.Primary }}>Wale.</span></Link>
-                            <Link
-                                to={'/auth'}
-                                style={{
-                                    display: "flex",
-                                    justifyContent: "center",
-                                    alignItems: "center",
-                                    padding: 5,
-                                    borderRadius: "50%",
-                                    boxShadow: "0 0 10px rgba(0,0,0,0.2)",
-                                    textDecoration: "none",
-                                }}>
-                                <AiOutlineUser color={COLORS.black} size={30} />
-                            </Link>
+                            {
+                                mobile ?
+                                    null :
+                                    <Link
+                                        to={'/auth'}
+                                        style={{
+                                            display: "flex",
+                                            justifyContent: "center",
+                                            alignItems: "center",
+                                            padding: 5,
+                                            borderRadius: "50%",
+                                            boxShadow: "0 0 10px rgba(0,0,0,0.2)",
+                                            textDecoration: "none",
+                                        }}>
+                                        <AiOutlineUser color={COLORS.black} size={30} />
+                                    </Link>
+                            }
                         </div>
                         <div style={{
                             width: "90%",
@@ -169,7 +173,7 @@ export default function Header() {
                                 margin: 0,
                                 padding: 0,
                             }}
-                            onClick={() => navigate('/cart')}
+                                onClick={() => navigate('/cart')}
                             >
                                 <p style={{
                                     position: "absolute",
@@ -182,27 +186,27 @@ export default function Header() {
                                 <AiOutlineShoppingCart color={COLORS.Primary} size={30} />
                             </div>
                             {
-                                access===null?
-                            <IconButton
-                                Icon={AiOutlineUser}
-                                title="Login"
-                                color={COLORS.black}
-                                textStyle={{
-                                    color: COLORS.black,
-                                    ...FONTS.h4
-                                }}
-                                onClick={() => navigate('/auth')}
-                            /> :
-                            <IconButton
-                                Icon={AiOutlineUser}
-                                title="My Account"
-                                color={COLORS.black}
-                                textStyle={{
-                                    color: COLORS.black,
-                                    ...FONTS.h4
-                                }}
-                                onClick={() => navigate('/profile')}
-                            />
+                                access === null ?
+                                    <IconButton
+                                        Icon={AiOutlineUser}
+                                        title="Login"
+                                        color={COLORS.black}
+                                        textStyle={{
+                                            color: COLORS.black,
+                                            ...FONTS.h4
+                                        }}
+                                        onClick={() => navigate('/auth')}
+                                    /> :
+                                    <IconButton
+                                        Icon={AiOutlineUser}
+                                        title="My Account"
+                                        color={COLORS.black}
+                                        textStyle={{
+                                            color: COLORS.black,
+                                            ...FONTS.h4
+                                        }}
+                                        onClick={() => navigate('/profile')}
+                                    />
                             }
                             <IconButton
                                 Icon={AiOutlineMobile}
