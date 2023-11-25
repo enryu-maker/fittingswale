@@ -1,6 +1,6 @@
 import React from 'react'
 import { Images } from '../Assets/Image'
-import { FONTS } from '../Assets/Theme'
+import { COLORS, FONTS } from '../Assets/Theme'
 import { useNavigate } from 'react-router-dom'
 export default function CircularCard({
     item
@@ -41,6 +41,7 @@ export default function CircularCard({
                     ...FONTS.h5,
                     marginBlock: 0,
                     width: "120px",
+                    color: COLORS.black,
                 }}>{item?.name}</p>
             </button>
 

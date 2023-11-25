@@ -113,7 +113,7 @@ export default function More() {
                                 alignSelf: "center",
                                 paddingBlock: 2,
                                 fontFamily: "Poppins-Bold",
-                                fontSize: 18,
+                                fontSize: 20,
                                 cursor: "pointer",
                                 textTransform: "capitalize",
                                 marginBlock: 5,
@@ -123,13 +123,19 @@ export default function More() {
                                 <p
                                     onClick={() => {
                                         setCurrent(index);
-                                        navigate("/moreinfo");
+                                        navigate("/moreinfo",{
+                                            state: {
+                                                id: item.id,
+                                                index: index,
+                                            }
+                                        });
                                     }}
                                     style={{
                                         textAlign: "left",
                                         marginBlock: 0,
                                         width: "90%",
                                         alignSelf: "center",
+                                        color:  COLORS.black,
                                     }}>{item.title}</p>
                             </div>
                         )

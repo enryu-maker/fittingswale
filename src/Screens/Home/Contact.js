@@ -52,16 +52,22 @@ export default function Contact() {
         <p>/</p>
         <p>Contact Us</p>
       </div>
-      
+      <p style={{
+            textAlign: 'left',
+            ...FONTS.h1,
+            marginBlockStart: 0,
+          }}>Contact Us<span style={{
+            color: COLORS.Primary
+          }}>.</span></p>
       <div style={{
         width: "100%",
         height: mobile ? "auto" : "75%",
         display: "flex",
-        flexDirection: "row",
+        flexDirection:mobile?"column" : "row",
         alignItems: "center",
         justifyContent: "space-evenly",
         backgroundColor: COLORS.white,
-        marginBlockEnd: 40,
+        paddingBlock: 30,
       }}>
         <div style={{
           display: "flex",
@@ -70,13 +76,6 @@ export default function Contact() {
           alignItems: "flex-start",
           width: mobile ? "90%" : "45%",
         }}>
-          <p style={{
-            textAlign: 'left',
-            ...FONTS.h1,
-            marginBlockEnd: 0,
-          }}>Contact Us<span style={{
-            color: COLORS.Primary
-          }}>.</span></p>
           <div>
             <p style={{
               textAlign: 'left',
@@ -128,7 +127,7 @@ export default function Contact() {
           width: mobile ? "90vw" : "40vw",
           justifyContent: "space-evenly",
           alignItems: "flex-start",
-          height: mobile ? "auto" : "60vh",
+          height: mobile ? "70vh" : "60vh",
         }}>
           <p style={{
             textAlign: 'left',

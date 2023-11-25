@@ -8,29 +8,57 @@ import { CiStar } from "react-icons/ci";
 import { FaHistory } from "react-icons/fa";
 import { IoShareSocialOutline } from "react-icons/io5"
 import { Images } from '../Assets/Image';
+import useMediaQuery from '../Component/useMediaQuery';
+import TextButton from '../Component/TextButton';
+import Upload from '../Component/Upload';
 export const ProfileScreen = () => {
     const { control, handleSubmit, formState: { errors } } = useForm();
     const [disabled, setDisabled] = React.useState(true);
+    const [pan, setPan] = React.useState(null);
+    const [gst, setGst] = React.useState(null);
+    const mobile = useMediaQuery('(max-width: 768px)');
     return (
         <div style={{
-            width: "100%",
+            width: "90%",
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'flex-start',
+            marginBlockEnd: 10,
         }}>
-            <p style={{
-                ...FONTS.h2,
-                color: COLORS.gray,
-            }}>Profile
-                <span style={{
-                    color: COLORS.Primary
-                }}>.</span>
-            </p>
+            <div style={{
+                width: "100%",
+                display: 'flex',
+                flexDirection: 'row',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+            }}>
+                <p style={{
+                    ...FONTS.h2,
+                    color: COLORS.gray,
+                }}>Profile
+                    <span style={{
+                        color: COLORS.Primary
+                    }}>.</span>
+                </p>
+                <p style={{
+                    ...FONTS.h3,
+                    color: "#0080ff",
+                    marginBlock: 5,
+                    cursor: "pointer",
+                }}
+                    onClick={() => {
+                        setDisabled(!disabled);
+                    }}
+                >Edit</p>
+            </div>
             <div style={{
                 display: 'flex',
                 flexWrap: 'wrap',
                 width: "100%",
-                justifyContent: 'space-between',
+                marginBlockEnd: mobile ? 20 : 10,
+                paddingBlock: 10,
+                justifyContent: mobile ? 'center' : "space-between",
+                alignItems: mobile ? 'center' : "flex-start",
             }}>
                 <Controller
                     control={control}
@@ -42,12 +70,12 @@ export const ProfileScreen = () => {
                         <div style={{
                             display: 'flex',
                             flexDirection: 'column',
-                            width: "45%",
+                            width: mobile ? "100%" : "45%",
                             justifyContent: 'space-evenly',
                             alignItems: 'center',
                         }}>
                             <div style={{
-                                width: "88%",
+                                width: mobile ? "90%" : "88%",
                                 display: 'flex',
                                 flexDirection: 'row',
                                 alignItems: 'center',
@@ -59,26 +87,16 @@ export const ProfileScreen = () => {
                                     color: COLORS.darkGray,
                                     marginBlock: 5
                                 }}>Full Name</p>
-                                <p style={{
-                                    ...FONTS.h4,
-                                    color: "#0080ff",
-                                    marginBlock: 5,
-                                    cursor: "pointer",
-                                }}
-                                    onClick={() => {
-                                        setDisabled(!disabled);
-                                    }}
-                                >Edit</p>
                             </div>
                             <input
                                 type="text"
                                 placeholder="Name"
                                 style={{
-                                    width: "88%",
+                                    width: mobile ? "90%" : "88%",
                                     height: 40,
                                     border: "none",
                                     outline: "none",
-                                    backgroundColor: "#f5f5f5",
+                                    backgroundColor: mobile ? "white" : "#f5f5f5",
                                     borderRadius: 5,
                                     ...FONTS.body3,
                                     color: COLORS.black,
@@ -101,12 +119,12 @@ export const ProfileScreen = () => {
                         <div style={{
                             display: 'flex',
                             flexDirection: 'column',
-                            width: "45%",
+                            width: mobile ? "100%" : "45%",
                             justifyContent: 'space-evenly',
                             alignItems: 'center',
                         }}>
                             <div style={{
-                                width: "88%",
+                                width: mobile ? "90%" : "88%",
                                 display: 'flex',
                                 flexDirection: 'row',
                                 alignItems: 'center',
@@ -118,26 +136,16 @@ export const ProfileScreen = () => {
                                     color: COLORS.darkGray,
                                     marginBlock: 5
                                 }}>Email</p>
-                                <p style={{
-                                    ...FONTS.h4,
-                                    color: "#0080ff",
-                                    marginBlock: 5,
-                                    cursor: "pointer",
-                                }}
-                                    onClick={() => {
-                                        setDisabled(!disabled);
-                                    }}
-                                >Edit</p>
                             </div>
                             <input
                                 type="email"
                                 placeholder="Email"
                                 style={{
-                                    width: "88%",
+                                    width: mobile ? "90%" : "88%",
                                     height: 40,
                                     border: "none",
                                     outline: "none",
-                                    backgroundColor: "#f5f5f5",
+                                    backgroundColor: mobile ? "white" : "#f5f5f5",
                                     borderRadius: 5,
                                     ...FONTS.body3,
                                     color: COLORS.black,
@@ -160,12 +168,12 @@ export const ProfileScreen = () => {
                         <div style={{
                             display: 'flex',
                             flexDirection: 'column',
-                            width: "45%",
+                            width: mobile ? "100%" : "45%",
                             justifyContent: 'space-evenly',
                             alignItems: 'center',
                         }}>
                             <div style={{
-                                width: "88%",
+                                width: mobile ? "90%" : "88%",
                                 display: 'flex',
                                 flexDirection: 'row',
                                 alignItems: 'center',
@@ -177,26 +185,16 @@ export const ProfileScreen = () => {
                                     color: COLORS.darkGray,
                                     marginBlock: 5
                                 }}>Phone</p>
-                                <p style={{
-                                    ...FONTS.h4,
-                                    color: "#0080ff",
-                                    marginBlock: 5,
-                                    cursor: "pointer",
-                                }}
-                                    onClick={() => {
-                                        setDisabled(!disabled);
-                                    }}
-                                >Edit</p>
                             </div>
                             <input
                                 type="number"
                                 placeholder="Phone"
                                 style={{
-                                    width: "88%",
+                                    width: mobile ? "90%" : "88%",
                                     height: 40,
                                     border: "none",
                                     outline: "none",
-                                    backgroundColor: "#f5f5f5",
+                                    backgroundColor: mobile ? "white" : "#f5f5f5",
                                     borderRadius: 5,
                                     ...FONTS.body3,
                                     color: COLORS.black,
@@ -209,15 +207,196 @@ export const ProfileScreen = () => {
                         </div>
                     )}
                 />
+                <Controller
+                    control={control}
+                    name="gst"
+                    rules={{
+                        required: true,
+                    }}
+                    render={({ field: { onChange, value } }) => (
+                        <div style={{
+                            display: 'flex',
+                            flexDirection: 'column',
+                            width: mobile ? "100%" : "45%",
+                            justifyContent: 'space-evenly',
+                            alignItems: 'center',
+                        }}>
+                            <div style={{
+                                width: mobile ? "90%" : "88%",
+                                display: 'flex',
+                                flexDirection: 'row',
+                                alignItems: 'center',
+                                justifyContent: 'space-between',
+                                paddingInline: 2,
+                            }}>
+                                <p style={{
+                                    ...FONTS.h3,
+                                    color: COLORS.darkGray,
+                                    marginBlock: 5
+                                }}>GST Number</p>
+                            </div>
+                            <input
+                                type="text"
+                                placeholder="Gst Number"
+                                style={{
+                                    width: mobile ? "90%" : "88%",
+                                    height: 40,
+                                    border: "none",
+                                    outline: "none",
+                                    backgroundColor: mobile ? "white" : "#f5f5f5",
+                                    borderRadius: 5,
+                                    ...FONTS.body3,
+                                    color: COLORS.black,
+                                    paddingInline: 10,
+                                }}
+                                disabled={disabled}
+                                onChange={onChange}
+                                value={value}
+                            />
+                        </div>
+                    )}
+                />
+                <Controller
+                    control={control}
+                    name="pan"
+                    rules={{
+                        required: true,
+                    }}
+                    render={({ field: { onChange, value } }) => (
+                        <div style={{
+                            display: 'flex',
+                            flexDirection: 'column',
+                            width: mobile ? "100%" : "45%",
+                            justifyContent: 'space-evenly',
+                            alignItems: 'center',
+                        }}>
+                            <div style={{
+                                width: mobile ? "90%" : "88%",
+                                display: 'flex',
+                                flexDirection: 'row',
+                                alignItems: 'center',
+                                justifyContent: 'space-between',
+                                paddingInline: 2,
+                            }}>
+                                <p style={{
+                                    ...FONTS.h3,
+                                    color: COLORS.darkGray,
+                                    marginBlock: 5
+                                }}>Pan Number</p>
+                            </div>
+                            <input
+                                type="number"
+                                placeholder="Pan Number"
+                                style={{
+                                    width: mobile ? "90%" : "88%",
+                                    height: 40,
+                                    border: "none",
+                                    outline: "none",
+                                    backgroundColor: mobile ? "white" : "#f5f5f5",
+                                    borderRadius: 5,
+                                    ...FONTS.body3,
+                                    color: COLORS.black,
+                                    paddingInline: 10,
+                                }}
+                                disabled={disabled}
+                                onChange={onChange}
+                                value={value}
+                            />
+                        </div>
+                    )}
+                />
+
+                <Controller
+                    control={control}
+                    name="gstcertificate"
+                    rules={{
+                        required: true,
+                    }}
+                    render={({ field: { onChange, value } }) => (
+                        <div style={{
+                            display: 'flex',
+                            flexDirection: 'column',
+                            width: mobile ? "100%" : "45%",
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                        }}>
+                            <div style={{
+                                width: mobile ? "90%" : "88%",
+                                display: 'flex',
+                                flexDirection: 'row',
+                                alignItems: 'center',
+                                justifyContent: 'space-between',
+                                paddingInline: 2,
+                            }}>
+                                <p style={{
+                                    ...FONTS.h3,
+                                    color: COLORS.darkGray,
+                                    marginBlock: 5
+                                }}>Gst Certificate</p>
+                            </div>
+                            <Upload
+                                value={gst}
+                                setValue={setGst}
+                                title={"Gst Certificate"}
+                                disabled={disabled}
+                            />
+                        </div>
+                    )}
+                />
+                <Controller
+                    control={control}
+                    name="gstcertificate"
+                    rules={{
+                        required: true,
+                    }}
+                    render={({ field: { onChange, value } }) => (
+                        <div style={{
+                            display: 'flex',
+                            flexDirection: 'column',
+                            width: mobile ? "100%" : "45%",
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                        }}>
+                            <div style={{
+                                width: mobile ? "90%" : "88%",
+                                display: 'flex',
+                                flexDirection: 'row',
+                                alignItems: 'center',
+                                justifyContent: 'space-between',
+                                paddingInline: 2,
+                            }}>
+                                <p style={{
+                                    ...FONTS.h3,
+                                    color: COLORS.darkGray,
+                                    marginBlock: 5
+                                }}>Pan Card</p>
+                            </div>
+                            <Upload
+                                value={pan}
+                                setValue={setPan}
+                                title={"Pan Card"}
+                                disabled={disabled}
+                            />
+                        </div>
+                    )}
+                />
+
             </div>
+            <TextButton
+                title="Update"
+                onClick={handleSubmit((data) => {
+                    console.log(data);
+                })}
+            />
         </div>
     )
 }
 
 export const CoinsScreen = () => {
+    const mobile = useMediaQuery('(max-width: 768px)');
     return (
         <div style={{
-            width: "100%",
+            width: "90%",
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'flex-start',
@@ -288,7 +467,7 @@ export const CoinsScreen = () => {
             <div style={{
                 display: "flex",
                 flexDirection: "row",
-                width:"55%",
+                width: mobile ? "90%" : "55%",
                 justifyContent: "space-between",
                 alignItems: "center",
             }}>
@@ -301,24 +480,30 @@ export const CoinsScreen = () => {
                     borderRadius: 10,
                     border: `2px solid ${COLORS.Primary1}`,
                 }} >
-                    <IoShareSocialOutline size={20} color={COLORS.Primary} />
+                    <IoShareSocialOutline size={25} color={COLORS.Primary} />
                     <p style={{
                         ...FONTS.h3,
                         color: COLORS.darkGray,
                         marginBlock: 0,
                         paddingInline: 10,
-                    }}> 
-                    Refer Now
+                    }}>
+                        Refer
                     </p>
                 </button>
-                <p style={{
-                    ...FONTS.h1,
-                    color: COLORS.black,
-                    marginBlock: 5,
-                }}>Earn Upto <span style={{
-                    color: COLORS.Primary
-                }}>100 </span>
-                StarCoins</p>
+                <p style={
+                    mobile ? {
+                        ...FONTS.h3,
+                        marginBlock: 0,
+                        alignSelf: "center",
+                        marginLeft: "5px",
+                    } :
+                        {
+                            ...FONTS.h1,
+                            color: COLORS.black,
+                            marginBlock: 5,
+                        }}>Earn Upto <span style={{
+                            color: COLORS.Primary
+                        }}>100 </span>StarCoins</p>
             </div>
 
             <p style={{
@@ -337,7 +522,7 @@ export const CoinsScreen = () => {
 export const OrdersScreen = () => {
     return (
         <div style={{
-            width: "100%",
+            width: "90%",
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'flex-start',
@@ -355,10 +540,10 @@ export const OrdersScreen = () => {
     )
 }
 export const AddressScreen = () => {
-
+    const mobile = useMediaQuery('(max-width: 768px)');
     return (
         <div style={{
-            width: "100%",
+            width: "90%",
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'flex-start',
@@ -372,7 +557,7 @@ export const AddressScreen = () => {
                 }}>.</span>
             </p>
             <button style={{
-                width: "88%",
+                width: mobile ? "100%" : "88%",
                 height: 40,
                 border: `1px solid ${COLORS.Primary}`,
                 outline: "none",
@@ -390,9 +575,10 @@ export const AddressScreen = () => {
 }
 
 export const SettingScreen = () => {
+    const mobile = useMediaQuery('(max-width: 768px)');
     return (
         <div style={{
-            width: "100%",
+            width: "90%",
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'flex-start',
@@ -412,7 +598,7 @@ export const SettingScreen = () => {
 export const CouponsScreen = () => {
     return (
         <div style={{
-            width: "100%",
+            width: "90%",
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'flex-start',
@@ -432,7 +618,7 @@ export const CouponsScreen = () => {
 export const RatingScreen = () => {
     return (
         <div style={{
-            width: "100%",
+            width: "90%",
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'flex-start',

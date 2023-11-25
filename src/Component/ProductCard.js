@@ -28,7 +28,7 @@ export default function ProductCard({
                 cursor: "pointer",
             }}
             onClick={() => {
-                Navigate(`prodinfo/${item.id}`, {
+                Navigate(`prodinfo/${item.name}`, {
                     state: {
                         id: item.id,
                         item: item,

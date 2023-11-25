@@ -2,6 +2,7 @@ import React from 'react'
 import { COLORS, FONTS } from '../Assets/Theme'
 import { Link } from 'react-router-dom'
 import { PrivacyData } from './Data';
+import useMediaQuery from '../Component/useMediaQuery';
 export default function Privacy() {
     const [current, setCurrent] = React.useState(0);
     React.useEffect(() => {
@@ -10,6 +11,7 @@ export default function Privacy() {
             behavior: "smooth"
         })
     }, [])
+    const mobile = useMediaQuery('(max-width: 768px)');
     return (
         <div
             style={{
@@ -83,7 +85,7 @@ export default function Privacy() {
                 marginBlock: 40,
             }}>
                 <div style={{
-                    width: "25%",
+                    width: mobile?"100%" : "25%",
                     height: "100%",
                     paddingInline: 20,
                     justifyContent: "space-evenly",
@@ -94,14 +96,14 @@ export default function Privacy() {
                         PrivacyData.map((item, index) => {
                             return (
                                 <div key={index} style={{
-                                    width: "90%",
+                                    width:mobile?"95%" : "90%",
                                     height: "8%",
                                     display: "flex",
-                                    flexDirection: "row",
+                                    flexDirection: mobile?"column":"row",
                                     alignItems: "center",
                                     justifyContent: "flex-start",
-                                    backgroundColor: current === index ? COLORS.Primary : COLORS.white,
-                                    color: current === index ? COLORS.white : COLORS.gray,
+                                    backgroundColor:mobile?null : current === index ? COLORS.Primary : COLORS.white,
+                                    color:mobile?null : current === index ? COLORS.white : COLORS.gray,
                                     alignSelf: "center",
                                     paddingInline: 5,
                                     paddingBlock: 2,
@@ -118,43 +120,75 @@ export default function Privacy() {
                                         onClick={() => {
                                             setCurrent(index);
                                         }}
-                                        style={{
+                                        style={
+                                            mobile?{
+                                                textAlign: "left",
+                                                marginBlock: 0,
+                                                width: "100%",
+                                                alignSelf: "left",
+                                                
+                                                ...FONTS.h2,
+                                            }:{
                                             textAlign: "left",
                                             marginBlock: 0,
                                             width: "90%",
                                             alignSelf: "center",
                                         }}>{item.section}</p>
+                                    {
+                                        mobile ?
+                                            item.content.map((item, index) => (
+                                                <p style={mobile?{
+                                                    ...FONTS.body4,
+                                                    textAlign:"justify",
+                                                    color: COLORS.black,
+                                                }:{
+                                                    ...FONTS.body3,
+                                                    textAlign:"justify",
+                                                    color: COLORS.black,
+                                                }}>
+                                                    {item}
+                                                </p>
+
+                                            ))
+                                            :
+                                            null
+                                    }
                                 </div>
                             )
                         }
                         )
                     }
                 </div>
-                <div style={{
-                    width: "72%",
-                    height: "100%",
-                    paddingInline: 20,
-                }}>
-                    <p style={{
-                        ...FONTS.h2,
-                        color: COLORS.gray,
-                        textAlign: "left",
-                        width: "88%",
-                        textTransform: "capitalize",
-                    }}>
-                        {PrivacyData[current]?.section}<span style={{ color: COLORS.Primary }}>.</span>
-                    </p>
-                    {
-                        PrivacyData[current]?.content.map((item, index) => (
-                            <p style={{
-                                ...FONTS.body3
-                            }}>
-                                {item}
-                            </p>
+                {
+                    mobile ?
+                        null :
 
-                        ))
-                    }
-                </div>
+                        <div style={{
+                            width: "72%",
+                            height: "100%",
+                            paddingInline: 20,
+                        }}>
+                            <p style={{
+                                ...FONTS.h2,
+                                color: COLORS.gray,
+                                textAlign: "left",
+                                width: "88%",
+                                textTransform: "capitalize",
+                            }}>
+                                {PrivacyData[current]?.section}<span style={{ color: COLORS.Primary }}>.</span>
+                            </p>
+                            {
+                                PrivacyData[current]?.content.map((item, index) => (
+                                    <p style={{
+                                        ...FONTS.body3
+                                    }}>
+                                        {item}
+                                    </p>
+
+                                ))
+                            }
+                        </div>
+                }
             </div>
         </div>
     )

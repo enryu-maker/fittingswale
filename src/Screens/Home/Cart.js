@@ -74,10 +74,9 @@ export default function Cart() {
                 alignItems:mobile?"center" : "flex-start",
                 justifyContent: "space-between",
                 marginBlock: 40,
-                height: mobile?"auto" : "65vh",
+                height: mobile?"auto" : "60vh",
             }}>
                 <div 
-                
                 style={
                     mobile?{
                         width:"98%",
@@ -93,7 +92,7 @@ export default function Cart() {
                     alignItems: "center",
                     height: "100%",
                     overflowY:"scroll",
-                    justifyContent: "space-evenly",
+                    // justifyContent: "space-evenly",
                 }}>
                     <VerticalCard />
                     <VerticalCard />

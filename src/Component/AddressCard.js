@@ -12,7 +12,7 @@ export default function AddressCard() {
                 flexDirection: 'row',
                 alignItems: 'center',
                 backgroundColor: COLORS.white,
-                width: "88%",
+                width:mobile?"100%" : "88%",
                 boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.1)",
                 height: "120px",
                 alignSelf: 'center',
