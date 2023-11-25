@@ -1,3 +1,5 @@
+
+
 export const Data = {
     Category: [
         {
@@ -7,7 +9,7 @@ export const Data = {
                 {
                     "id": 11,
                     "name": "Screw & Nail",
-                    "Scategory": [
+                    "Products": [
                         {
                             "id": 1,
                             "name": "csk slotted",
@@ -1043,7 +1045,7 @@ export const ReturnPolicyData = [
             `On certain select days as specified by fittingswale, separate policies may be applicable.`,
             `The Products will be picked up within the timelines intimidated by fittingswale.`,
             `If a User has purchased Products which form a part of a package of other Products, or if the Product forms a part of a promotional package (collectively, the “Bundled Package”), the User shall be required to return all the Products that form a part of the Bundled Package for fittingswale to process refunds.`,
-             
+
             `Refunds are generally initiated in the following scenarios:`,
             `·         When Orders are cancelled as per our Cancellation policy`,
             `·         If our Logistics partner is unable to deliver the product`,
@@ -1062,7 +1064,7 @@ export const ReturnPolicyData = [
             `In the event a User returns a Product that is not accompanied by the accessories or other items originally bundled with such Product, fittingswale shall have the right, exercisable at its sole discretion, to (i) (a) refuse to accept the return of such Product, or (b) process any refund thereof, or (ii) deduct the amount payable in respect of such items from the amount of refund such User is entitled to.`,
             `It is expressly clarified that the refund entitled to by a User shall include monies paid towards shipping charges or any other such charges applicable from time to time. Delivery charges applied on these products shall not be refunded.`,
             `In events where fittingswale  is unable to facilitate a pick-up of the purchased Product for return from the User, the User is required to self-ship the Product to fittingswale shipping warehouse, the address for which will be intimated to the User upon the User placing such request for return. Upon self-shipping the Product to fittingswale warehouse, the User shall be required to scan the courier/postal receipt to support@fittingswale.com  for fittingswale records. The aforesaid return by self-shipping the Products is subject to the returned Products passing quality check at fittingswale returns desk/warehouse as provided .In the event where the User claims to have self-shipped the Product in accordance with the process set out above and fittingswale does not receive the returned Product or the package containing such Product is empty, the User shall be required to submit the ‘proof of delivery’ received from the courier/postal agency to fittingswale to prove his/her claim of return of Products through self-shipment to fittingswale. It is specifically clarified that any refunds shall be processed by fittingswale only upon receiving the returned Products and concluding required quality checks as provided or receiving the ‘proof of delivery’ from the User, as the case may be.`,
-           ` How Refund process follow:`,
+            ` How Refund process follow:`,
             `·         Prepaid Orders: Refunds for prepaid orders will be processed through a secure payment gateway or any other online banking/electronic funds transfer system approved by the Reserve Bank of India (RBI) and/or the User’s fittingswale Wallet within such reasonable time (subject to the policies of the User’s bank in case of bank account/credit card refunds) from the date on which fittingswale initiates the refund.. The refunded amount will be credited to the same account from which the transaction was made during the product purchase.`,
             `·         Cash on Delivery Transactions: In the case of cash on delivery transactions, if a refund is applicable, it will be disbursed via methods such as fittingswale shall process all refunds into either the User’s fittingswale Wallet or demand drafts, NEFT (National Electronic Funds Transfer), or cheques. These will be issued in favour of the customer who made the product purchase, following the details provided by the customer.`,
             `Refund Processing Timelines:`,

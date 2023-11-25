@@ -1,7 +1,10 @@
 export const COLORS = {
     // Primary:"rgb(126,204,122)",
-    Primary1: "#df643a35",
-    Primary: `#df643a`,
+    // Primary1: "#df643a35",
+    // Primary: `#df643a`,
+    Primary: `#1893f8`,
+    Primary1: "#1893f835",
+
     // Primary:"#757D85",
     transparentPrimary: "#d6f5d6",
     transparentPrimary2: "#eaf7e9",
