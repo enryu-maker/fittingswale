@@ -15,26 +15,59 @@ import About from './Constants/About'
 import Cat from './Screens/Mobile.js/Cat'
 import More from './Screens/Mobile.js/More'
 import MoreInfo from './Screens/Mobile.js/MoreInfo'
+import { useDispatch, useSelector } from 'react-redux'
+import { Init } from './Store/actions'
 
 export default function App() {
+  const dispatch = useDispatch();
+  React.useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    })
+    dispatch(Init())
+  }, [])
+  const access = useSelector(state => state.Reducers.access)
   return (
-    <Routes>
-      <Route path="/" element={<Home />}  />
-      <Route path="/auth" element={<AuthScreen />} />
-      <Route path="/cat" element={<Cat />} />
-      <Route path="/more" element={<More />} />
-      <Route path="/moreinfo" element={<MoreInfo />} />
-      <Route path="/terms" element={<Terms />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/refund" element={<Refund />} />
-      <Route path="/profile" element={<Profile />} />
-      <Route path="/download" element={<Download />} />
-      <Route path="/contact-us" element={<Contact />} />
-      <Route path="/catinfo" element={<CatInfo />} />
-      <Route path="/cart" element={<Cart />} />
-      <Route path="/privacy" element={<Privacy />} />
-      <Route path="/catinfo/prodinfo/:pid" element={<ProdInfo />} />
-      <Route path="/prodinfo/:pid" element={<ProdInfo />} />
-    </Routes>
+    <>
+      {
+        access != null ?
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/cat" element={<Cat />} />
+            <Route path="/more" element={<More />} />
+            <Route path="/moreinfo" element={<MoreInfo />} />
+            <Route path="/terms" element={<Terms />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/refund" element={<Refund />} />
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/download" element={<Download />} />
+            <Route path="/contact-us" element={<Contact />} />
+            <Route path="/catinfo" element={<CatInfo />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/privacy" element={<Privacy />} />
+            <Route path="/catinfo/prodinfo/:pid" element={<ProdInfo />} />
+            <Route path="/prodinfo/:pid" element={<ProdInfo />} />
+          </Routes>
+          :
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/cat" element={<Cat />} />
+            <Route path="/more" element={<More />} />
+            <Route path="/moreinfo" element={<MoreInfo />} />
+            <Route path="/terms" element={<Terms />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/refund" element={<Refund />} />
+            <Route path="/auth" element={<AuthScreen />} />
+            <Route path="/download" element={<Download />} />
+            <Route path="/contact-us" element={<Contact />} />
+            <Route path="/catinfo" element={<CatInfo />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/privacy" element={<Privacy />} />
+            <Route path="/catinfo/prodinfo/:pid" element={<ProdInfo />} />
+            <Route path="/prodinfo/:pid" element={<ProdInfo />} />
+          </Routes>
+      }
+    </>
   )
 }

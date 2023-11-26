@@ -1,5 +1,6 @@
 const initialState = {
-    access: "null",
+    access: null,
+    user: null,
 };
 
 export default (state = initialState, action) => {
@@ -7,7 +8,8 @@ export default (state = initialState, action) => {
         case "LOGIN":
             return {
                 ...state,
-                access: action.payload,
+                access: action.payload.access,
+                user: action.payload.user
             };
         case "LOGOUT":
             return {

@@ -228,11 +228,11 @@ export default function Header() {
                             mobile ? null
                                 :
                                 <div style={{
-                                    width: "100%",
+                                    width: "97%",
                                     display: "flex",
                                     justifyContent: "space-between",
                                     alignItems: "center",
-                                    backgroundColor: "#f5f5f5",
+                                    // backgroundColor: "#f5f5f5",
                                     transition: "all 0.5s ease",
                                 }}>
                                     <FlatList

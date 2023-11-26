@@ -2,16 +2,21 @@ import React from 'react'
 import useMediaQuery from '../../Component/useMediaQuery'
 import { FONTS, COLORS } from '../../Assets/Theme';
 import { Controller, useForm } from 'react-hook-form'
-import { AiOutlineMail, AiOutlineUser,AiOutlineEyeInvisible,AiOutlineEye } from 'react-icons/ai'
+import { AiOutlineMail, AiOutlineUser, AiOutlineEyeInvisible, AiOutlineEye } from 'react-icons/ai'
 import { MdPassword } from 'react-icons/md'
 import TextButton from '../../Component/TextButton';
 import { Link } from 'react-router-dom';
 import { FiPhoneCall } from 'react-icons/fi'
+import { useDispatch } from 'react-redux';
+import { LoginAction } from '../../Store/actions';
+import { ThreeDots } from 'react-loader-spinner';
 export default function AuthScreen() {
     const mobile = useMediaQuery("(max-width: 768px)");
-    const { control } = useForm();
+    const { handleSubmit, control, formState: { errors }, } = useForm();
     const [count, setCount] = React.useState(0);
     const [show, setShow] = React.useState(false);
+    const [loading, setLoading] = React.useState(false);
+    const dispatch = useDispatch();
     return (
         <div
             style={{
@@ -20,11 +25,11 @@ export default function AuthScreen() {
                 justifyContent: "center",
                 alignItems: "center",
                 width: "100vw",
-                height:mobile? "100vh":"88vh",
+                height: mobile ? "100vh" : "88vh",
                 backgroundColor: "#f5f5f5"
             }}
         >
-            
+
             <div style={{
                 height: mobile ? "85%" : "80%",
                 width: mobile ? "95%" : "55%",
@@ -63,11 +68,11 @@ export default function AuthScreen() {
                     {
                         count === 0 ?
                             <>
-                                <p style={mobile?{
-                                    fontFamily:"Poppins-SemiBold",
-                                    fontSize:30,
-                                    color:COLORS.darkGray
-                                }:{
+                                <p style={mobile ? {
+                                    fontFamily: "Poppins-SemiBold",
+                                    fontSize: 30,
+                                    color: COLORS.darkGray
+                                } : {
                                     ...FONTS.h1,
                                     marginBlockEnd: 0,
                                 }}>
@@ -82,7 +87,7 @@ export default function AuthScreen() {
                                     Welcome back! Log in to access your account.
                                 </p>
                                 <Controller
-                                    name="email"
+                                    name="username"
                                     control={control}
                                     defaultValue=""
                                     rules={{ required: true }}
@@ -97,7 +102,7 @@ export default function AuthScreen() {
                                                 height: "45px",
                                                 borderRadius: 10,
                                             }}>
-                                            <AiOutlineMail color={COLORS.gray} size={25} style={{ marginInline: 10 }} />
+                                            <AiOutlineUser color={COLORS.gray} size={25} style={{ marginInline: 10 }} />
                                             <input
                                                 style={{
                                                     width: "80%",
@@ -109,12 +114,16 @@ export default function AuthScreen() {
                                                     color: COLORS.black,
                                                     padding: 0,
                                                 }}
-                                                type="email"
-                                                placeholder="Enter your email"
+                                                type="text"
+                                                placeholder="Enter your Username"
                                                 placeholderTextColor={COLORS.black}
                                                 value={value}
                                                 onChange={onChange}
                                             />
+                                            <div style={{
+                                                height: 25,
+                                                width: 25,
+                                            }} />
                                         </div>
                                     )}
                                 />
@@ -147,7 +156,7 @@ export default function AuthScreen() {
                                                     color: COLORS.black,
                                                     padding: 0
                                                 }}
-                                                type={!show?"password":"text"}
+                                                type={!show ? "password" : "text"}
                                                 placeholder="Enter your Password"
                                                 placeholderTextColor={COLORS.black}
                                                 value={value}
@@ -157,16 +166,16 @@ export default function AuthScreen() {
                                                 <AiOutlineEyeInvisible
                                                     color={COLORS.gray}
                                                     size={25}
-                                                    style={{ cursor:"pointer", marginInline: 10 }}
+                                                    style={{ cursor: "pointer", marginInline: 10 }}
                                                     onClick={() => setShow(!show)}
                                                 /> :
                                                 <AiOutlineEye
                                                     color={COLORS.gray}
                                                     size={25}
-                                                    style={{cursor:"pointer", marginInline: 10 }}
+                                                    style={{ cursor: "pointer", marginInline: 10 }}
                                                     onClick={() => setShow(!show)}
-                                                />    
-                                        }
+                                                />
+                                            }
                                         </div>
                                     )}
                                 />
@@ -181,13 +190,31 @@ export default function AuthScreen() {
                                 }}>
                                     Forgot Password?
                                 </Link>
-                                <TextButton
-                                    title={"Login"}
-                                    onClick={() => { }}
-                                    buttonStyle={{
-                                        marginTop: 15
-                                    }}
-                                />
+                                {
+                                    loading ?
+                                        <ThreeDots
+                                            height="50"
+                                            width="50"
+                                            radius="4"
+                                            color={COLORS.Primary}
+                                            ariaLabel="three-dots-loading"
+                                            wrapperStyle={{}}
+                                            wrapperClassName=""
+                                            visible={true}
+                                        />
+                                        :
+                                        <TextButton
+                                            title={"Login"}
+                                            onClick={() => {
+                                                handleSubmit((data) => {
+                                                    dispatch(LoginAction(setLoading, data))
+                                                })()
+                                            }}
+                                            buttonStyle={{
+                                                marginTop: 15
+                                            }}
+                                        />
+                                }
                                 <p style={{
                                     ...FONTS.h4,
                                     marginBlockStart: 15,
@@ -214,10 +241,10 @@ export default function AuthScreen() {
                             </> :
                             <>
                                 <p style={mobile ? {
-                                    fontFamily:"Poppins-SemiBold",
-                                    fontSize:30,
-                                    color:COLORS.darkGray
-                                }: {
+                                    fontFamily: "Poppins-SemiBold",
+                                    fontSize: 30,
+                                    color: COLORS.darkGray
+                                } : {
                                     ...FONTS.h1,
                                     marginBlockEnd: 0,
                                 }}>
@@ -376,7 +403,7 @@ export default function AuthScreen() {
                                                     padding: 0,
 
                                                 }}
-                                                type={!show?"password":"text"}
+                                                type={!show ? "password" : "text"}
                                                 placeholder="Enter your Password"
                                                 placeholderTextColor={COLORS.black}
                                                 value={value}
@@ -386,16 +413,16 @@ export default function AuthScreen() {
                                                 <AiOutlineEyeInvisible
                                                     color={COLORS.gray}
                                                     size={25}
-                                                    style={{ cursor:"pointer", marginInline: 10 }}
+                                                    style={{ cursor: "pointer", marginInline: 10 }}
                                                     onClick={() => setShow(!show)}
                                                 /> :
                                                 <AiOutlineEye
                                                     color={COLORS.gray}
                                                     size={25}
-                                                    style={{cursor:"pointer", marginInline: 10 }}
+                                                    style={{ cursor: "pointer", marginInline: 10 }}
                                                     onClick={() => setShow(!show)}
-                                                />    
-                                        }
+                                                />
+                                            }
                                         </div>
                                     )}
                                 />
@@ -429,7 +456,7 @@ export default function AuthScreen() {
                                                     padding: 0,
 
                                                 }}
-                                                type={!show?"password":"text"}
+                                                type={!show ? "password" : "text"}
                                                 placeholder="Confirm Password"
                                                 placeholderTextColor={COLORS.black}
                                                 value={value}
@@ -439,16 +466,16 @@ export default function AuthScreen() {
                                                 <AiOutlineEyeInvisible
                                                     color={COLORS.gray}
                                                     size={25}
-                                                    style={{ cursor:"pointer", marginInline: 10 }}
+                                                    style={{ cursor: "pointer", marginInline: 10 }}
                                                     onClick={() => setShow(!show)}
                                                 /> :
                                                 <AiOutlineEye
                                                     color={COLORS.gray}
                                                     size={25}
-                                                    style={{cursor:"pointer", marginInline: 10 }}
+                                                    style={{ cursor: "pointer", marginInline: 10 }}
                                                     onClick={() => setShow(!show)}
-                                                />    
-                                        }
+                                                />
+                                            }
                                         </div>
                                     )}
                                 />

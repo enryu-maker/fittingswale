@@ -129,7 +129,7 @@ export default function Profile() {
                 justifyContent: 'center',
                 width: "100%",
                 backgroundColor: COLORS.white,
-                height: "60vh",
+                // height: "60vh",
                 paddingBlock: 20,
                 marginBlock: 40,
             }}>

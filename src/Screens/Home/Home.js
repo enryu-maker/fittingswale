@@ -10,6 +10,7 @@ import TextButton from '../../Component/TextButton';
 import { useNavigate } from 'react-router-dom';
 import FlatList from 'flatlist-react/lib';
 import { Data } from '../../Constants/Data';
+import { useSelector } from 'react-redux';
 export default function Home() {
   const mobile = useMediaQuery('(max-width: 768px)');
   const navigate = useNavigate();
@@ -18,7 +19,7 @@ export default function Home() {
       top: 0,
       behavior: "smooth"
   })
-  }, [])
+  }, [])  
   return (
     <div style={{
       display: 'flex',
