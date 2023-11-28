@@ -1,28 +1,28 @@
 {
   "files": {
-    "main.css": "/fittingswale/static/css/main.f45c7a43.css",
-    "main.js": "/fittingswale/static/js/main.fe1585ec.js",
-    "static/js/787.3646f686.chunk.js": "/fittingswale/static/js/787.3646f686.chunk.js",
-    "static/media/1.jpg": "/fittingswale/static/media/1.70c50271a1febe74b25c.jpg",
-    "static/media/Banner.png": "/fittingswale/static/media/Banner.01e82a2f801e6328200c.png",
-    "static/media/B1.png": "/fittingswale/static/media/B1.23e9d6338b586151eda5.png",
-    "static/media/Poppins-Italic.ttf": "/fittingswale/static/media/Poppins-Italic.e373f6163127e2d469af.ttf",
-    "static/media/Poppins-Light.ttf": "/fittingswale/static/media/Poppins-Light.7641a0f76ca9ef6c252c.ttf",
-    "static/media/Poppins-SemiBold.ttf": "/fittingswale/static/media/Poppins-SemiBold.ac8d04b620e54be9b0f0.ttf",
-    "static/media/Poppins-Bold.ttf": "/fittingswale/static/media/Poppins-Bold.cdb29a5d7ccf57ff05a3.ttf",
-    "static/media/Poppins-Black.ttf": "/fittingswale/static/media/Poppins-Black.d8b850b920a5ef49d752.ttf",
-    "static/media/CedarvilleCursive-Regular.ttf": "/fittingswale/static/media/CedarvilleCursive-Regular.a669593f51bb81ad0cc1.ttf",
-    "static/media/started.png": "/fittingswale/static/media/started.47fd76b6a1d2e5f99324.png",
-    "static/media/playstore.png": "/fittingswale/static/media/playstore.186c030df796ec48cb62.png",
-    "static/media/StarCoins.png": "/fittingswale/static/media/StarCoins.a340c13c22245dbd8ac2.png",
-    "static/media/appstore.png": "/fittingswale/static/media/appstore.9dc088d9161498add556.png",
-    "index.html": "/fittingswale/index.html",
-    "main.f45c7a43.css.map": "/fittingswale/static/css/main.f45c7a43.css.map",
-    "main.fe1585ec.js.map": "/fittingswale/static/js/main.fe1585ec.js.map",
-    "787.3646f686.chunk.js.map": "/fittingswale/static/js/787.3646f686.chunk.js.map"
+    "main.css": "/static/css/main.0e35ecc7.css",
+    "main.js": "/static/js/main.a91b7d55.js",
+    "static/js/787.3646f686.chunk.js": "/static/js/787.3646f686.chunk.js",
+    "static/media/1.jpg": "/static/media/1.70c50271a1febe74b25c.jpg",
+    "static/media/Banner.png": "/static/media/Banner.01e82a2f801e6328200c.png",
+    "static/media/B1.png": "/static/media/B1.23e9d6338b586151eda5.png",
+    "static/media/Poppins-Italic.ttf": "/static/media/Poppins-Italic.e373f6163127e2d469af.ttf",
+    "static/media/Poppins-Light.ttf": "/static/media/Poppins-Light.7641a0f76ca9ef6c252c.ttf",
+    "static/media/Poppins-SemiBold.ttf": "/static/media/Poppins-SemiBold.ac8d04b620e54be9b0f0.ttf",
+    "static/media/Poppins-Bold.ttf": "/static/media/Poppins-Bold.cdb29a5d7ccf57ff05a3.ttf",
+    "static/media/Poppins-Black.ttf": "/static/media/Poppins-Black.d8b850b920a5ef49d752.ttf",
+    "static/media/CedarvilleCursive-Regular.ttf": "/static/media/CedarvilleCursive-Regular.a669593f51bb81ad0cc1.ttf",
+    "static/media/started.png": "/static/media/started.47fd76b6a1d2e5f99324.png",
+    "static/media/playstore.png": "/static/media/playstore.186c030df796ec48cb62.png",
+    "static/media/StarCoins.png": "/static/media/StarCoins.a340c13c22245dbd8ac2.png",
+    "static/media/appstore.png": "/static/media/appstore.9dc088d9161498add556.png",
+    "index.html": "/index.html",
+    "main.0e35ecc7.css.map": "/static/css/main.0e35ecc7.css.map",
+    "main.a91b7d55.js.map": "/static/js/main.a91b7d55.js.map",
+    "787.3646f686.chunk.js.map": "/static/js/787.3646f686.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f45c7a43.css",
-    "static/js/main.fe1585ec.js"
+    "static/css/main.0e35ecc7.css",
+    "static/js/main.a91b7d55.js"
   ]
 }
