@@ -53,17 +53,17 @@ export default function Contact() {
         <p>Contact Us</p>
       </div>
       <p style={{
-            textAlign: 'left',
-            ...FONTS.h1,
-            marginBlockStart: 0,
-          }}>Contact Us<span style={{
-            color: COLORS.Primary
-          }}>.</span></p>
+        textAlign: 'left',
+        ...FONTS.h1,
+        marginBlockStart: 0,
+      }}>Contact Us<span style={{
+        color: COLORS.Primary
+      }}>.</span></p>
       <div style={{
         width: "100%",
         height: mobile ? "auto" : "75%",
         display: "flex",
-        flexDirection:mobile?"column" : "row",
+        flexDirection: mobile ? "column" : "row",
         alignItems: "center",
         justifyContent: "space-evenly",
         backgroundColor: COLORS.white,

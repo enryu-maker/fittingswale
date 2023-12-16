@@ -19,7 +19,7 @@ import MoreInfo from './Screens/Mobile.js/MoreInfo'
 export default function Home() {
   return (
     <Routes>
-      <Route path="/" element={<Home />}  />
+      <Route path="/" element={<Home />} />
       <Route path="/cat" element={<Cat />} />
       <Route path="/more" element={<More />} />
       <Route path="/moreinfo" element={<MoreInfo />} />

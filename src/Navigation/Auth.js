@@ -19,7 +19,7 @@ import MoreInfo from './Screens/Mobile.js/MoreInfo'
 export default function Auth() {
   return (
     <Routes>
-      <Route path="/" element={<Home />}  />
+      <Route path="/" element={<Home />} />
       <Route path="/auth" element={<AuthScreen />} />
       <Route path="/cat" element={<Cat />} />
       <Route path="/more" element={<More />} />
