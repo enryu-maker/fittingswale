@@ -1,9 +1,9 @@
 export const COLORS = {
     // Primary:"rgb(126,204,122)",
-    Primary1: "#df643a35",
-    Primary: `#df643a`,
-    // Primary: `#1893f8`,
-    // Primary1: "#1893f835",
+    // Primary1: "#ffdf0035",
+    // Primary: "Blue",
+    Primary: `#df633a`,
+    Primary1: "#df633a35",
 
     // Primary:"#757D85",
     transparentPrimary: "#d6f5d6",

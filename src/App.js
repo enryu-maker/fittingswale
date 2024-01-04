@@ -17,6 +17,7 @@ import More from './Screens/Mobile.js/More'
 import MoreInfo from './Screens/Mobile.js/MoreInfo'
 import { useDispatch, useSelector } from 'react-redux'
 import { Init } from './Store/actions'
+import Checkout from './Screens/Home/Order/Checkout'
 
 export default function App() {
   const dispatch = useDispatch();
@@ -25,7 +26,7 @@ export default function App() {
       top: 0,
       behavior: "smooth"
     })
-    dispatch(Init())
+    // dispatch(Init())
   }, [])
   const access = useSelector(state => state.Reducers.access)
   return (
@@ -36,6 +37,7 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/cat" element={<Cat />} />
             <Route path="/more" element={<More />} />
+            <Route path="/checkout" element={<Checkout />} />
             <Route path="/moreinfo" element={<MoreInfo />} />
             <Route path="/terms" element={<Terms />} />
             <Route path="/about" element={<About />} />

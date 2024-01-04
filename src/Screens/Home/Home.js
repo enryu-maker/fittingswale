@@ -13,13 +13,14 @@ import { Data } from '../../Constants/Data';
 import { useSelector } from 'react-redux';
 export default function Home() {
   const mobile = useMediaQuery('(max-width: 768px)');
+  const access = useSelector(state => state.Reducers.access)
   const navigate = useNavigate();
   React.useEffect(() => {
     window.scrollTo({
       top: 0,
       behavior: "smooth"
-  })
-  }, [])  
+    })
+  }, [])
   return (
     <div style={{
       display: 'flex',
@@ -39,13 +40,14 @@ export default function Home() {
         alignSelf: "center",
       }}>
         <Carousel
+
           selectedItem={1}
           showThumbs={false}
           showStatus={false}
           infiniteLoop={true}
           autoPlay={true}
           interval={3000}
-          stopOnHover={false}
+          stopOnHover={true}
           showIndicators={false}
         >
           <div style={{
@@ -56,6 +58,131 @@ export default function Home() {
               height: "350px",
               objectFit: "contain",
             }} src={Images.B1} />
+            {
+              mobile ? null :
+            <div style={{
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'flex-end',
+              position: "absolute",
+              top: "60%",
+              left: "50%",
+              transform: "translate(-50%,-50%)",
+              width: "100%",
+              height: "100%",
+            }}>
+              <div style={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                width: "40%",
+                height: "80%",
+                backgroundColor: COLORS.white
+              }}>
+                <p style={{
+                  ...FONTS.h1,
+                  color: COLORS.black,
+                  textAlign: "center",
+                  marginBlock: 0,
+                }}>
+                  Best Selling<span style={{ color: COLORS.Primary }}>.</span>
+                </p>
+                <div style={{
+                  height: "78%",
+                  width: "100%",
+                  display: "flex",
+                  flexDirection: "row",
+                  justifyContent: "space-evenly",
+                  alignItems: "flex-start",
+                  alignSelf: "center",
+                }}>
+                  <div style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    width: "45%",
+                    height: "100%",
+                  }}>
+                    <img
+                      src={Images.B1}
+                      style={{
+                        height: "100%",
+                        width: "100%",
+                        // objectFit: "contain",
+                      }}
+                    />
+                    <p style={{
+                      ...FONTS.body1,
+                      color: COLORS.black,
+                      textAlign: "center",
+                      marginBlock: 0,
+                    }}>
+                      Product Name
+                    </p>
+                    <p style={{
+                      ...FONTS.body3,
+                      color: COLORS.black,
+                      textAlign: "center",
+                      marginBlock: 0,
+                    }}>
+                      $ 200
+                    </p>
+                    <p style={{
+                      ...FONTS.body4,
+                      color: COLORS.black,
+                      textAlign: "center",
+                      marginBlock: 0,
+                    }}>
+                      Buy Now
+                    </p>
+                  </div>
+                  <div style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    width: "45%",
+                    height: "100%",
+                  }}>
+                    <img
+                      src={Images.B1}
+                      style={{
+                        height: "100%",
+                        width: "100%",
+                        // objectFit: "contain",
+                      }}
+                    />
+                    <p style={{
+                      ...FONTS.body1,
+                      color: COLORS.black,
+                      textAlign: "center",
+                      marginBlock: 0,
+                    }}>
+                      Product Name
+                    </p>
+                    <p style={{
+                      ...FONTS.body3,
+                      color: COLORS.black,
+                      textAlign: "center",
+                      marginBlock: 0,
+                    }}>
+                      $ 200
+                    </p>
+                    <p style={{
+                      ...FONTS.body4,
+                      color: COLORS.black,
+                      textAlign: "center",
+                      marginBlock: 0,
+                    }}>
+                      Buy Now
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            }
           </div>
           <div style={{
             width: "100%",
@@ -65,6 +192,132 @@ export default function Home() {
               height: "350px",
               objectFit: "contain",
             }} src={Images.B1} />
+            
+            {
+              mobile ? null :
+            <div style={{
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'flex-end',
+              position: "absolute",
+              top: "60%",
+              left: "50%",
+              transform: "translate(-50%,-50%)",
+              width: "100%",
+              height: "100%",
+            }}>
+              <div style={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                width: "40%",
+                height: "80%",
+                backgroundColor: COLORS.white
+              }}>
+                <p style={{
+                  ...FONTS.h1,
+                  color: COLORS.black,
+                  textAlign: "center",
+                  marginBlock: 0,
+                }}>
+                  Best Selling<span style={{ color: COLORS.Primary }}>.</span>
+                </p>
+                <div style={{
+                  height: "78%",
+                  width: "100%",
+                  display: "flex",
+                  flexDirection: "row",
+                  justifyContent: "space-evenly",
+                  alignItems: "flex-start",
+                  alignSelf: "center",
+                }}>
+                  <div style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    width: "45%",
+                    height: "100%",
+                  }}>
+                    <img
+                      src={Images.B1}
+                      style={{
+                        height: "100%",
+                        width: "100%",
+                        // objectFit: "contain",
+                      }}
+                    />
+                    <p style={{
+                      ...FONTS.body1,
+                      color: COLORS.black,
+                      textAlign: "center",
+                      marginBlock: 0,
+                    }}>
+                      Product Name
+                    </p>
+                    <p style={{
+                      ...FONTS.body3,
+                      color: COLORS.black,
+                      textAlign: "center",
+                      marginBlock: 0,
+                    }}>
+                      $ 200
+                    </p>
+                    <p style={{
+                      ...FONTS.body4,
+                      color: COLORS.black,
+                      textAlign: "center",
+                      marginBlock: 0,
+                    }}>
+                      Buy Now
+                    </p>
+                  </div>
+                  <div style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    width: "45%",
+                    height: "100%",
+                  }}>
+                    <img
+                      src={Images.B1}
+                      style={{
+                        height: "100%",
+                        width: "100%",
+                        // objectFit: "contain",
+                      }}
+                    />
+                    <p style={{
+                      ...FONTS.body1,
+                      color: COLORS.black,
+                      textAlign: "center",
+                      marginBlock: 0,
+                    }}>
+                      Product Name
+                    </p>
+                    <p style={{
+                      ...FONTS.body3,
+                      color: COLORS.black,
+                      textAlign: "center",
+                      marginBlock: 0,
+                    }}>
+                      $ 200
+                    </p>
+                    <p style={{
+                      ...FONTS.body4,
+                      color: COLORS.black,
+                      textAlign: "center",
+                      marginBlock: 0,
+                    }}>
+                      Buy Now
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            }
           </div>
           <div style={{
             width: "100%",
@@ -74,6 +327,131 @@ export default function Home() {
               height: "350px",
               objectFit: "contain",
             }} src={Images.B1} />
+            {
+              mobile ? null :
+            <div style={{
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'flex-end',
+              position: "absolute",
+              top: "60%",
+              left: "50%",
+              transform: "translate(-50%,-50%)",
+              width: "100%",
+              height: "100%",
+            }}>
+              <div style={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                width: "40%",
+                height: "80%",
+                backgroundColor: COLORS.white
+              }}>
+                <p style={{
+                  ...FONTS.h1,
+                  color: COLORS.black,
+                  textAlign: "center",
+                  marginBlock: 0,
+                }}>
+                  Best Selling<span style={{ color: COLORS.Primary }}>.</span>
+                </p>
+                <div style={{
+                  height: "78%",
+                  width: "100%",
+                  display: "flex",
+                  flexDirection: "row",
+                  justifyContent: "space-evenly",
+                  alignItems: "flex-start",
+                  alignSelf: "center",
+                }}>
+                  <div style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    width: "45%",
+                    height: "100%",
+                  }}>
+                    <img
+                      src={Images.B1}
+                      style={{
+                        height: "100%",
+                        width: "100%",
+                        // objectFit: "contain",
+                      }}
+                    />
+                    <p style={{
+                      ...FONTS.body1,
+                      color: COLORS.black,
+                      textAlign: "center",
+                      marginBlock: 0,
+                    }}>
+                      Product Name
+                    </p>
+                    <p style={{
+                      ...FONTS.body3,
+                      color: COLORS.black,
+                      textAlign: "center",
+                      marginBlock: 0,
+                    }}>
+                      $ 200
+                    </p>
+                    <p style={{
+                      ...FONTS.body4,
+                      color: COLORS.black,
+                      textAlign: "center",
+                      marginBlock: 0,
+                    }}>
+                      Buy Now
+                    </p>
+                  </div>
+                  <div style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    width: "45%",
+                    height: "100%",
+                  }}>
+                    <img
+                      src={Images.B1}
+                      style={{
+                        height: "100%",
+                        width: "100%",
+                        // objectFit: "contain",
+                      }}
+                    />
+                    <p style={{
+                      ...FONTS.body1,
+                      color: COLORS.black,
+                      textAlign: "center",
+                      marginBlock: 0,
+                    }}>
+                      Product Name
+                    </p>
+                    <p style={{
+                      ...FONTS.body3,
+                      color: COLORS.black,
+                      textAlign: "center",
+                      marginBlock: 0,
+                    }}>
+                      $ 200
+                    </p>
+                    <p style={{
+                      ...FONTS.body4,
+                      color: COLORS.black,
+                      textAlign: "center",
+                      marginBlock: 0,
+                    }}>
+                      Buy Now
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            }
           </div>
         </Carousel>
         {
@@ -175,12 +553,16 @@ export default function Home() {
             objectFit: "contain",
           }}
         />
-        <TextButton
-          title={"Get Started"}
-          onClick={() => {
-            navigate("/auth")
-          }}
-        />
+        {
+          access === null ? null :
+
+            <TextButton
+              title={"Get Started"}
+              onClick={() => {
+                navigate("/auth")
+              }}
+            />
+        }
       </div>
       <div
         style={{

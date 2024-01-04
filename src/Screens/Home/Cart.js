@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { COLORS, FONTS } from '../../Assets/Theme'
 import VerticalCard from '../../Component/VerticalCard';
 import TextButton from '../../Component/TextButton';
@@ -12,6 +12,7 @@ export default function Cart() {
         })
     }, [])
     const mobile = useMediaQuery('(max-width: 768px)');
+    const navigate = useNavigate();
     return (
         <div
             style={{
@@ -175,6 +176,9 @@ export default function Cart() {
                     </div>
                     <TextButton
                         title={"Checkout."}
+                        onClick={() => {
+                            navigate("/checkout")
+                         }}
                     />
                 </div>
 

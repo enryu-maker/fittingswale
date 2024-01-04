@@ -228,7 +228,7 @@ export default function Header() {
                             mobile ? null
                                 :
                                 <div style={{
-                                    width: "97%",
+                                    width: "100%",
                                     display: "flex",
                                     justifyContent: "space-between",
                                     alignItems: "center",

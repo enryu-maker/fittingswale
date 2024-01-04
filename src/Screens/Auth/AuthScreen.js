@@ -258,6 +258,35 @@ export default function AuthScreen() {
                                     Create your account to get started.
                                 </p>
                                 <Controller
+                                    name="role"
+                                    control={control}
+                                    defaultValue=""
+                                    rules={{ required: true }}
+                                    render={({ field: { onChange, value } }) => (
+                                        <select style={{
+                                            display: "flex",
+                                            justifyContent: "center",
+                                            alignItems: "center",
+                                            backgroundColor: "#f0f0f0",
+                                            width: mobile ? "88%" : "75%",
+                                            height: "45px",
+                                            borderRadius: 10,
+                                            outline: "none",
+                                            border: "none",
+                                            marginBlockEnd: 15,
+                                            paddingInline: 10,
+                                            ...FONTS.h3,
+                                        }}
+                                            value={value}
+                                            onChange={onChange}
+                                        >
+                                            <option value="Customer">Customer</option>
+                                            <option value="Interior">Interior</option>
+                                            <option value="Business">Business</option>
+                                        </select>
+                                    )}
+                                />
+                                <Controller
                                     name="name"
                                     control={control}
                                     defaultValue=""

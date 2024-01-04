@@ -25,6 +25,7 @@ export default function CButton({
                 cursor: "pointer",
                 outline: "none",
                 margin: 0,
+                width: "100%",
                 height: "50px",
                 textAlign: "center",
                 color: COLORS.black,
